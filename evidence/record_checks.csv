@@ -1,0 +1,6 @@
+check,source_row_number,original_count,original_count_is_missing,original_count_repr,original_county,original_language,original_annotation_code,expected_before_checking,actual_count,actual_count_is_missing,actual_county,actual_language,actual_is_suppressed,actual_has_valid_county,matches_expected
+regular numeric record,2,132,False,'132',Alameda,ASL,,Count converts to the same integer; row remains unsuppressed.,132,False,Alameda,ASL,False,True,True
+small-cell suppression,10,,True,<NA>,Alameda,Hebrew,1,Count remains missing and is_suppressed is True.,,True,Alameda,Hebrew,True,True,True
+complementary suppression,34, ,False,' ',Alpine,English,2,Whitespace/blank count becomes missing and is_suppressed is True.,,True,Alpine,English,True,True,True
+legacy language whitespace,19296,"2,255",False,"'2,255'",Alameda, Unknown,,"Language becomes Unknown, remains distinct from Missing/Unknown.",2255,False,Alameda,Unknown,False,True,True
+invalid county code,15423,,True,<NA>,Invalid County Code,English,1,Row is retained and has_valid_county is False.,,True,Invalid County Code,English,True,False,True

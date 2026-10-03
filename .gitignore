@@ -1,2 +1,6 @@
 *.csv
+!cleaned_data_sample.csv
+!evidence/*.csv
+output/
 .ipynb_checkpoints/
+__pycache__/

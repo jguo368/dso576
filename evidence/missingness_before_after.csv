@@ -1,0 +1,10 @@
+source_column,clean_column,missing_before,missing_after,explanation
+Month of Eligibility,month_of_eligibility,0,0,No missingness change.
+County,county,0,0,No missingness change.
+Language,language,0,0,No missingness change.
+Total Eligibles,total_eligibles,94321,94324,Three whitespace-only complementary-suppression cells become missing.
+Annotation Code,annotation_code,157211,157211,No missingness change.
+Annotation Description,annotation_description,157011,157011,No missingness change.
+Status,status,0,0,No missingness change.
+Date of Data,date_of_data,138139,141875,Publisher '.' markers are standardized to missing.
+Difference,<dropped>,251535,,Dropped because every source value is missing; no rows dropped.
