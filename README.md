@@ -35,7 +35,6 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 python clean_data.py
 jupyter nbconvert --to notebook --execute --inplace data_cleaning.ipynb
-python build_report.py
 ```
 
 `clean_data.py` stops with an assertion error if a required validation fails.
@@ -54,4 +53,3 @@ The notebook deliberately reruns the same pipeline from the untouched source.
 - `evidence/missingness_before_after.csv`
 - `evidence/cleaning_decision_log.csv`
 - `evidence/record_checks.csv`
-- `Module_6_Cleaning_Report.pdf`
