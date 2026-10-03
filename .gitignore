@@ -1,0 +1,5 @@
+# Full raw dataset
+data/raw/*.csv
+
+# Full cleaned dataset
+data/cleaned/medi_cal_eligibility_language_clean.csv
