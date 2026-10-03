@@ -1,0 +1,51 @@
+source_row_number,month_of_eligibility,county,language,total_eligibles,annotation_code,annotation_description,status,status_label,date_of_data,is_suppressed,is_statewide,has_valid_county,is_preliminary
+15423,2025-09-01,Invalid County Code,English,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,False,True
+223775,2011-12-01,Invalid County Code,English,,1,Cell suppressed for small numbers,F,Final,,True,False,False,False
+223776,2011-12-01,Invalid County Code,Spanish,,1,Cell suppressed for small numbers,F,Final,,True,False,False,False
+237845,2010-12-01,Invalid County Code,English,,1,Cell suppressed for small numbers,F,Final,,True,False,False,False
+34,2026-08-01,Alpine,English,,2,Cell suppressed for complementary cell,P,Preliminary,2026-08-11,True,False,True,True
+283,2026-08-01,Inyo,Missing/Unknown,,2,Cell suppressed for complementary cell,P,Preliminary,2026-08-11,True,False,True,True
+698,2026-08-01,Riverside,Italian,,2,Cell suppressed for complementary cell,P,Preliminary,2026-08-11,True,False,True,True
+10,2026-08-01,Alameda,Hebrew,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+12,2026-08-01,Alameda,Hmong,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+14,2026-08-01,Alameda,Italian,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+24,2026-08-01,Alameda,Polish,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+35,2026-08-01,Alpine,Farsi,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+36,2026-08-01,Alpine,Spanish,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+37,2026-08-01,Amador,ASL,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+38,2026-08-01,Amador,Cambodian,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+39,2026-08-01,Amador,Cantonese,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+41,2026-08-01,Amador,Hindi,,1,Cell suppressed for small numbers,P,Preliminary,2026-08-11,True,False,True,True
+19296,2025-06-01,Alameda,Unknown,2255,,,F,Final,2026-06-11,False,False,True,False
+19330,2025-06-01,Amador,Unknown,,1,Cell suppressed for small numbers,F,Final,2026-06-11,True,False,True,False
+19343,2025-06-01,Butte,Unknown,82,,,F,Final,2026-06-11,False,False,True,False
+19371,2025-06-01,Calaveras,Unknown,,1,Cell suppressed for small numbers,F,Final,2026-06-11,True,False,True,False
+19390,2025-06-01,Colusa,Unknown,,1,Cell suppressed for small numbers,F,Final,2026-06-11,True,False,True,False
+19400,2025-06-01,Contra Costa,Unknown,920,,,F,Final,2026-06-11,False,False,True,False
+19446,2025-06-01,El Dorado,Unknown,62,,,F,Final,2026-06-11,False,False,True,False
+19471,2025-06-01,Fresno,Unknown,2775,,,F,Final,2026-06-11,False,False,True,False
+19502,2025-06-01,Glenn,Unknown,,1,Cell suppressed for small numbers,F,Final,2026-06-11,True,False,True,False
+19521,2025-06-01,Humboldt,Unknown,39,,,F,Final,2026-06-11,False,False,True,False
+53500,2023-05-01,STATEWIDE,STATEWIDE,16051565,,Statewide Total by MOE,F,Final,2024-05-09,False,True,True,False
+54842,2023-04-01,STATEWIDE,STATEWIDE,15981071,,Statewide Total by MOE,F,Final,2024-04-08,False,True,True,False
+56180,2023-03-01,STATEWIDE,STATEWIDE,15897515,,Statewide Total by MOE,F,Final,2024-03-08,False,True,True,False
+57522,2023-02-01,STATEWIDE,STATEWIDE,15798053,,Statewide Total by MOE,F,Final,2024-02-06,False,True,True,False
+58862,2023-01-01,STATEWIDE,STATEWIDE,15717809,,Statewide Total by MOE,F,Final,2024-01-09,False,True,True,False
+2,2026-08-01,Alameda,ASL,132,,,P,Preliminary,2026-08-11,False,False,True,True
+3,2026-08-01,Alameda,Arabic,2724,,,P,Preliminary,2026-08-11,False,False,True,True
+4,2026-08-01,Alameda,Armenian,35,,,P,Preliminary,2026-08-11,False,False,True,True
+5,2026-08-01,Alameda,Cambodian,715,,,P,Preliminary,2026-08-11,False,False,True,True
+6,2026-08-01,Alameda,Cantonese,23765,,,P,Preliminary,2026-08-11,False,False,True,True
+16528,2025-08-01,Alameda,ASL,115,,,F,Final,2026-08-11,False,False,True,False
+16529,2025-08-01,Alameda,Arabic,2922,,,F,Final,2026-08-11,False,False,True,False
+16530,2025-08-01,Alameda,Armenian,41,,,F,Final,2026-08-11,False,False,True,False
+16531,2025-08-01,Alameda,Cambodian,762,,,F,Final,2026-08-11,False,False,True,False
+16532,2025-08-01,Alameda,Cantonese,25114,,,F,Final,2026-08-11,False,False,True,False
+31443,2024-09-01,Calaveras,Italian,,1,Cell suppressed for small numbers,F,Final,2025-09-11,True,False,True,False
+62884,2022-10-01,Sacramento,Russian,26519,,,F,Final,2023-10-09,False,False,True,False
+94325,2020-10-01,Santa Barbara,ASL,11,,,F,Final,2021-10-12,False,False,True,False
+125766,2018-09-01,Tuolumne,Hebrew,,1,Cell suppressed for small numbers,F,Final,,True,False,True,False
+157207,2016-07-01,Humboldt,Thai,,1,Cell suppressed for small numbers,F,Final,,True,False,True,False
+188648,2014-06-01,Santa Clara,Hebrew,29,,,F,Final,,False,False,True,False
+220089,2012-03-01,Colusa,Spanish,2317,,,F,Final,,False,False,True,False
+251530,2010-01-01,Yuba,Other Non-Eng,16,,,F,Final,,False,False,True,False
