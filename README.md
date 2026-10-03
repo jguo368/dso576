@@ -1,5 +1,10 @@
 Module 6 Data Cleaning:
 
+GitHub branch: Jonathan
+Branch URL: https://github.com/jguo368/dso576/tree/Jonathan
+Commit ID: dcaf9421f06536835b79f8fe820ce95d11fb2a86
+
+
 # Goal and question
 
 This submission cleans the California Department of Health Care Services
