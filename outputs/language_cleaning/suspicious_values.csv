@@ -1,0 +1,9 @@
+issue,affected_rows,documented_decision
+blank_or_whitespace_eligible_count,94324,"Retain row; count is unknown, never zero."
+code_1_suppression,93681,Retain code and flag as suppressed.
+code_2_suppression,643,Retain code and flag as suppressed.
+whitespace_only_code_2_count,3,Trim whitespace then retain as unknown suppressed count.
+leading_whitespace_language,2573,Trim whitespace only; do not merge categories.
+missing_or_dot_data_date,141875,Keep row; parsed date is missing.
+special_geography,204,Keep full-table row; do not map it to a county polygon.
+all_blank_difference,251535,Retain nullable field; exclude from metrics.

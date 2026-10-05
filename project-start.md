@@ -14,7 +14,7 @@ A Medi-Cal workforce planning manager at the California Department of Health Car
 
 ## Candidate Vision B
 
-A Medi-Cal access strategy manager at the California Department of Health Care Services must decide which counties and underserved population groups should be prioritized for language-access, telehealth, or transportation support.
+A Medi-Cal access strategy manager at the California Department of Health Care Services must decide which counties and language populations should be prioritized for additional language-access capacity. The manager can select a primary language and eligibility month in an interface, then interact with a California county map to review the relevant certified-eligible counts and figures for each county.
 
 ## Core data source we confirmed we can access
 Core data: 

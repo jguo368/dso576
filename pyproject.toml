@@ -1,0 +1,12 @@
+[project]
+name = "dso576-medi-cal-language-access"
+version = "0.1.0"
+description = "Reproducible cleaning for DHCS certified eligibles by primary language"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0,<3",
+    "ipykernel>=6,<8",
+]
+
+[tool.uv]
+package = false

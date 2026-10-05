@@ -1,0 +1,7 @@
+stage,input_rows,output_rows,affected_rows,what_changed
+raw_profile,251535,251535,0,Inspected source before changing values.
+text_normalization,251535,251535,6312,Trimmed whitespace only; no categories merged.
+type_conversion,251535,251535,43819,Removed display commas only; count units unchanged.
+suppression_handling,251535,251535,94324,Suppressed counts remain unknown.
+map_derivative,251535,251331,204,Only special geographies excluded from map output.
+selector_coverage,251331,6093,5521,Flagged incomplete county coverage.

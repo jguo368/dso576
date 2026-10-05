@@ -1,0 +1,59 @@
+county,county_fips,county_display
+Alameda,06001,Alameda County
+Alpine,06003,Alpine County
+Amador,06005,Amador County
+Butte,06007,Butte County
+Calaveras,06009,Calaveras County
+Colusa,06011,Colusa County
+Contra Costa,06013,Contra Costa County
+Del Norte,06015,Del Norte County
+El Dorado,06017,El Dorado County
+Fresno,06019,Fresno County
+Glenn,06021,Glenn County
+Humboldt,06023,Humboldt County
+Imperial,06025,Imperial County
+Inyo,06027,Inyo County
+Kern,06029,Kern County
+Kings,06031,Kings County
+Lake,06033,Lake County
+Lassen,06035,Lassen County
+Los Angeles,06037,Los Angeles County
+Madera,06039,Madera County
+Marin,06041,Marin County
+Mariposa,06043,Mariposa County
+Mendocino,06045,Mendocino County
+Merced,06047,Merced County
+Modoc,06049,Modoc County
+Mono,06051,Mono County
+Monterey,06053,Monterey County
+Napa,06055,Napa County
+Nevada,06057,Nevada County
+Orange,06059,Orange County
+Placer,06061,Placer County
+Plumas,06063,Plumas County
+Riverside,06065,Riverside County
+Sacramento,06067,Sacramento County
+San Benito,06069,San Benito County
+San Bernardino,06071,San Bernardino County
+San Diego,06073,San Diego County
+San Francisco,06075,San Francisco County
+San Joaquin,06077,San Joaquin County
+San Luis Obispo,06079,San Luis Obispo County
+San Mateo,06081,San Mateo County
+Santa Barbara,06083,Santa Barbara County
+Santa Clara,06085,Santa Clara County
+Santa Cruz,06087,Santa Cruz County
+Shasta,06089,Shasta County
+Sierra,06091,Sierra County
+Siskiyou,06093,Siskiyou County
+Solano,06095,Solano County
+Sonoma,06097,Sonoma County
+Stanislaus,06099,Stanislaus County
+Sutter,06101,Sutter County
+Tehama,06103,Tehama County
+Trinity,06105,Trinity County
+Tulare,06107,Tulare County
+Tuolumne,06109,Tuolumne County
+Ventura,06111,Ventura County
+Yolo,06113,Yolo County
+Yuba,06115,Yuba County

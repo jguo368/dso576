@@ -1,2 +1,4 @@
-*.csv
+data/raw/*.csv
+outputs/language_cleaning/cleaned_language_eligibles.csv
 .ipynb_checkpoints/
+__pycache__/
