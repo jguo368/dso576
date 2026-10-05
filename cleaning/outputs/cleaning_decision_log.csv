@@ -1,0 +1,7 @@
+rule,reason,validation_check
+Preserve original CSVs; write only derived outputs.,Protects source evidence and makes reruns safe.,Input hashes are saved; script has no source-file write path.
+Keep blank/suppressed counts as missing.,Annotations indicate suppression; zero would invent a count.,Check parsed blanks remain missing and annotations remain present.
+Create stripped comparison fields only.,Outer whitespace should not split comparisons; raw categories remain auditable.,Compare raw/clean mappings; no language recoding.
+Keep F and P rows and flag P.,Status definition is unresolved.,Row-count audit reports P rows; neither status is filtered.
+Keep and flag Invalid County Code rows.,They cannot safely be assigned to a county.,Report retained rows; exclude only in downstream ranking/map filters.
+Do not row-level merge demographic long tables.,Different grains would multiply rows.,Key-validation report documents aggregate-first requirement.

@@ -1,0 +1,5 @@
+dataset,rows_before,rows_after,exact_duplicates,repeated_key_rows,failed_count_conversions,failed_month_conversions,failed_date_conversions,negative_counts,invalid_county_code_rows,statewide_rows,preliminary_rows
+language,251535,251535,0,0,0,0,0,0,4,200,16526
+age_sex,93004,93004,0,0,0,0,0,0,4,200,5581
+race_age,275838,275838,0,0,0,0,0,0,4,200,16530
+derived_county_month,11603,11603,0,0,0,0,0,0,3,0,697

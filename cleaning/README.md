@@ -29,3 +29,13 @@ Blank/suppressed counts remain missing, language categories are not combined,
 and F/P records are retained. Invalid County Code remains in the cleaned data
 with a flag; county rankings/maps must filter it at analysis time. No
 provider-capacity values are created because no provider dataset is present.
+
+## Submission metadata
+
+- Branch name: `fennie-project`
+- Branch URL: `https://github.com/jguo368/dso576/tree/fennie-project`
+- Cleaning workflow commit ID: `794e5d6fcce8abe6a8a8fa9a0488ed71ec8ed5e3`
+
+The commit ID identifies the committed cleaning workflow and evidence files used
+to prepare the submission PDF. The branch tip may also include the final PDF
+packaging commit.

@@ -1,0 +1,308 @@
+dataset,stage,column,missing_count,missing_percent
+language,raw,Month of Eligibility,0,0.0
+language,raw,County,0,0.0
+language,raw,Language,0,0.0
+language,raw,Total Eligibles,94321,37.5
+language,raw,Annotation Code,157211,62.5
+language,raw,Annotation Description,157011,62.42
+language,raw,Status,0,0.0
+language,raw,Date of Data,138139,54.92
+language,raw,Difference,251535,100.0
+language,cleaned,Month of Eligibility,0,0.0
+language,cleaned,County,0,0.0
+language,cleaned,Language,0,0.0
+language,cleaned,Total Eligibles,0,0.0
+language,cleaned,Annotation Code,0,0.0
+language,cleaned,Annotation Description,0,0.0
+language,cleaned,Status,0,0.0
+language,cleaned,Date of Data,0,0.0
+language,cleaned,Difference,0,0.0
+language,cleaned,County_clean,0,0.0
+language,cleaned,Language_clean,0,0.0
+language,cleaned,month_of_eligibility_parsed,0,0.0
+language,cleaned,date_of_data_parsed,141875,56.4
+language,cleaned,is_date_of_data_placeholder,0,0.0
+language,cleaned,total_eligibles_parsed,94324,37.5
+language,cleaned,is_preliminary_status,0,0.0
+language,cleaned,is_invalid_county_code,0,0.0
+language,cleaned,is_statewide_record,0,0.0
+age_sex,raw,Month of Eligibility,0,0.0
+age_sex,raw,County,0,0.0
+age_sex,raw,Age Group,0,0.0
+age_sex,raw,Gender,0,0.0
+age_sex,raw,Total Eligibles,175,0.19
+age_sex,raw,Annotation Code,92829,99.81
+age_sex,raw,Annotation Description,92629,99.6
+age_sex,raw,Status,0,0.0
+age_sex,raw,Date of Data,53013,57.0
+age_sex,cleaned,Month of Eligibility,0,0.0
+age_sex,cleaned,County,0,0.0
+age_sex,cleaned,Age Group,0,0.0
+age_sex,cleaned,Gender,0,0.0
+age_sex,cleaned,Total Eligibles,0,0.0
+age_sex,cleaned,Annotation Code,0,0.0
+age_sex,cleaned,Annotation Description,0,0.0
+age_sex,cleaned,Status,0,0.0
+age_sex,cleaned,Date of Data,0,0.0
+age_sex,cleaned,County_clean,0,0.0
+age_sex,cleaned,Age Group_clean,0,0.0
+age_sex,cleaned,Gender_clean,0,0.0
+age_sex,cleaned,month_of_eligibility_parsed,0,0.0
+age_sex,cleaned,date_of_data_parsed,54408,58.5
+age_sex,cleaned,is_date_of_data_placeholder,0,0.0
+age_sex,cleaned,total_eligibles_parsed,175,0.19
+age_sex,cleaned,is_preliminary_status,0,0.0
+age_sex,cleaned,is_invalid_county_code,0,0.0
+age_sex,cleaned,is_statewide_record,0,0.0
+race_age,raw,Month of Eligibility,0,0.0
+race_age,raw,County,0,0.0
+race_age,raw,Age Group,0,0.0
+race_age,raw,Ethnicity,0,0.0
+race_age,raw,Total Eligibles,22515,8.16
+race_age,raw,Annotation Code,253323,91.84
+race_age,raw,Annotation Description,253123,91.77
+race_age,raw,Status,0,0.0
+race_age,raw,Date of Data,157187,56.99
+race_age,cleaned,Month of Eligibility,0,0.0
+race_age,cleaned,County,0,0.0
+race_age,cleaned,Age Group,0,0.0
+race_age,cleaned,Ethnicity,0,0.0
+race_age,cleaned,Total Eligibles,0,0.0
+race_age,cleaned,Annotation Code,0,0.0
+race_age,cleaned,Annotation Description,0,0.0
+race_age,cleaned,Status,0,0.0
+race_age,cleaned,Date of Data,0,0.0
+race_age,cleaned,County_clean,0,0.0
+race_age,cleaned,Age Group_clean,0,0.0
+race_age,cleaned,Ethnicity_clean,0,0.0
+race_age,cleaned,month_of_eligibility_parsed,0,0.0
+race_age,cleaned,date_of_data_parsed,161323,58.48
+race_age,cleaned,is_date_of_data_placeholder,0,0.0
+race_age,cleaned,total_eligibles_parsed,22515,8.16
+race_age,cleaned,is_preliminary_status,0,0.0
+race_age,cleaned,is_invalid_county_code,0,0.0
+race_age,cleaned,is_statewide_record,0,0.0
+derived_county_month,raw,month_of_eligibility,0,0.0
+derived_county_month,raw,county,0,0.0
+derived_county_month,raw,status,0,0.0
+derived_county_month,raw,date_of_data,6614,57.0
+derived_county_month,raw,county_total_eligibles,89,0.77
+derived_county_month,raw,county_total_is_complete,0,0.0
+derived_county_month,raw,age_sex_suppressed_cells,0,0.0
+derived_county_month,raw,language_suppressed_cells,0,0.0
+derived_county_month,raw,race_age_suppressed_cells,0,0.0
+derived_county_month,raw,age_sex__age_00_18__female,3,0.03
+derived_county_month,raw,age_sex__age_00_18__male,3,0.03
+derived_county_month,raw,age_sex__age_19_44__female,3,0.03
+derived_county_month,raw,age_sex__age_19_44__male,3,0.03
+derived_county_month,raw,age_sex__age_45_64__female,3,0.03
+derived_county_month,raw,age_sex__age_45_64__male,3,0.03
+derived_county_month,raw,age_sex__age_65_plus__female,88,0.76
+derived_county_month,raw,age_sex__age_65_plus__male,89,0.77
+derived_county_month,raw,language__asl,5677,48.93
+derived_county_month,raw,language__arabic,4909,42.31
+derived_county_month,raw,language__armenian,8402,72.41
+derived_county_month,raw,language__cambodian,6600,56.88
+derived_county_month,raw,language__cantonese,4794,41.32
+derived_county_month,raw,language__english,4,0.03
+derived_county_month,raw,language__farsi,5772,49.75
+derived_county_month,raw,language__french,8534,73.55
+derived_county_month,raw,language__hebrew,10799,93.07
+derived_county_month,raw,language__hindi,11233,96.81
+derived_county_month,raw,language__hmong,6868,59.19
+derived_county_month,raw,language__ilocano,8541,73.61
+derived_county_month,raw,language__italian,10345,89.16
+derived_county_month,raw,language__japanese,8879,76.52
+derived_county_month,raw,language__korean,5962,51.38
+derived_county_month,raw,language__lao,6224,53.64
+derived_county_month,raw,language__mandarin,5210,44.9
+derived_county_month,raw,language__mien,9192,79.22
+derived_county_month,raw,language__missing_unknown,537,4.63
+derived_county_month,raw,language__other_chinese,6881,59.3
+derived_county_month,raw,language__other_non_eng,3666,31.6
+derived_county_month,raw,language__other_sign,9097,78.4
+derived_county_month,raw,language__polish,9980,86.01
+derived_county_month,raw,language__portuguese,7026,60.55
+derived_county_month,raw,language__punjabi,11141,96.02
+derived_county_month,raw,language__russian,5442,46.9
+derived_county_month,raw,language__samoan,7748,66.78
+derived_county_month,raw,language__spanish,221,1.9
+derived_county_month,raw,language__tagalog,4706,40.56
+derived_county_month,raw,language__thai,8150,70.24
+derived_county_month,raw,language__turkish,9335,80.45
+derived_county_month,raw,language__unknown,9912,85.43
+derived_county_month,raw,language__vietnamese,4101,35.34
+derived_county_month,raw,race_age__age_00_18__ai_an,811,6.99
+derived_county_month,raw,race_age__age_00_18__asian,1326,11.43
+derived_county_month,raw,race_age__age_00_18__black,1662,14.32
+derived_county_month,raw,race_age__age_00_18__hispanic,245,2.11
+derived_county_month,raw,race_age__age_00_18__not_reported,325,2.8
+derived_county_month,raw,race_age__age_00_18__white,120,1.03
+derived_county_month,raw,race_age__age_19_44__ai_an,459,3.96
+derived_county_month,raw,race_age__age_19_44__asian,1105,9.52
+derived_county_month,raw,race_age__age_19_44__black,1277,11.01
+derived_county_month,raw,race_age__age_19_44__hispanic,247,2.13
+derived_county_month,raw,race_age__age_19_44__not_reported,598,5.15
+derived_county_month,raw,race_age__age_19_44__white,55,0.47
+derived_county_month,raw,race_age__age_45_64__ai_an,1000,8.62
+derived_county_month,raw,race_age__age_45_64__asian,1718,14.81
+derived_county_month,raw,race_age__age_45_64__black,2123,18.3
+derived_county_month,raw,race_age__age_45_64__hispanic,461,3.97
+derived_county_month,raw,race_age__age_45_64__not_reported,425,3.66
+derived_county_month,raw,race_age__age_45_64__white,115,0.99
+derived_county_month,raw,race_age__age_65_plus__ai_an,3246,27.98
+derived_county_month,raw,race_age__age_65_plus__asian,2420,20.86
+derived_county_month,raw,race_age__age_65_plus__black,4089,35.24
+derived_county_month,raw,race_age__age_65_plus__hispanic,736,6.34
+derived_county_month,raw,race_age__age_65_plus__not_reported,594,5.12
+derived_county_month,raw,race_age__age_65_plus__white,192,1.65
+derived_county_month,cleaned,month_of_eligibility,0,0.0
+derived_county_month,cleaned,county,0,0.0
+derived_county_month,cleaned,status,0,0.0
+derived_county_month,cleaned,date_of_data,0,0.0
+derived_county_month,cleaned,county_total_eligibles,0,0.0
+derived_county_month,cleaned,county_total_is_complete,0,0.0
+derived_county_month,cleaned,age_sex_suppressed_cells,0,0.0
+derived_county_month,cleaned,language_suppressed_cells,0,0.0
+derived_county_month,cleaned,race_age_suppressed_cells,0,0.0
+derived_county_month,cleaned,age_sex__age_00_18__female,0,0.0
+derived_county_month,cleaned,age_sex__age_00_18__male,0,0.0
+derived_county_month,cleaned,age_sex__age_19_44__female,0,0.0
+derived_county_month,cleaned,age_sex__age_19_44__male,0,0.0
+derived_county_month,cleaned,age_sex__age_45_64__female,0,0.0
+derived_county_month,cleaned,age_sex__age_45_64__male,0,0.0
+derived_county_month,cleaned,age_sex__age_65_plus__female,0,0.0
+derived_county_month,cleaned,age_sex__age_65_plus__male,0,0.0
+derived_county_month,cleaned,language__asl,0,0.0
+derived_county_month,cleaned,language__arabic,0,0.0
+derived_county_month,cleaned,language__armenian,0,0.0
+derived_county_month,cleaned,language__cambodian,0,0.0
+derived_county_month,cleaned,language__cantonese,0,0.0
+derived_county_month,cleaned,language__english,0,0.0
+derived_county_month,cleaned,language__farsi,0,0.0
+derived_county_month,cleaned,language__french,0,0.0
+derived_county_month,cleaned,language__hebrew,0,0.0
+derived_county_month,cleaned,language__hindi,0,0.0
+derived_county_month,cleaned,language__hmong,0,0.0
+derived_county_month,cleaned,language__ilocano,0,0.0
+derived_county_month,cleaned,language__italian,0,0.0
+derived_county_month,cleaned,language__japanese,0,0.0
+derived_county_month,cleaned,language__korean,0,0.0
+derived_county_month,cleaned,language__lao,0,0.0
+derived_county_month,cleaned,language__mandarin,0,0.0
+derived_county_month,cleaned,language__mien,0,0.0
+derived_county_month,cleaned,language__missing_unknown,0,0.0
+derived_county_month,cleaned,language__other_chinese,0,0.0
+derived_county_month,cleaned,language__other_non_eng,0,0.0
+derived_county_month,cleaned,language__other_sign,0,0.0
+derived_county_month,cleaned,language__polish,0,0.0
+derived_county_month,cleaned,language__portuguese,0,0.0
+derived_county_month,cleaned,language__punjabi,0,0.0
+derived_county_month,cleaned,language__russian,0,0.0
+derived_county_month,cleaned,language__samoan,0,0.0
+derived_county_month,cleaned,language__spanish,0,0.0
+derived_county_month,cleaned,language__tagalog,0,0.0
+derived_county_month,cleaned,language__thai,0,0.0
+derived_county_month,cleaned,language__turkish,0,0.0
+derived_county_month,cleaned,language__unknown,0,0.0
+derived_county_month,cleaned,language__vietnamese,0,0.0
+derived_county_month,cleaned,race_age__age_00_18__ai_an,0,0.0
+derived_county_month,cleaned,race_age__age_00_18__asian,0,0.0
+derived_county_month,cleaned,race_age__age_00_18__black,0,0.0
+derived_county_month,cleaned,race_age__age_00_18__hispanic,0,0.0
+derived_county_month,cleaned,race_age__age_00_18__not_reported,0,0.0
+derived_county_month,cleaned,race_age__age_00_18__white,0,0.0
+derived_county_month,cleaned,race_age__age_19_44__ai_an,0,0.0
+derived_county_month,cleaned,race_age__age_19_44__asian,0,0.0
+derived_county_month,cleaned,race_age__age_19_44__black,0,0.0
+derived_county_month,cleaned,race_age__age_19_44__hispanic,0,0.0
+derived_county_month,cleaned,race_age__age_19_44__not_reported,0,0.0
+derived_county_month,cleaned,race_age__age_19_44__white,0,0.0
+derived_county_month,cleaned,race_age__age_45_64__ai_an,0,0.0
+derived_county_month,cleaned,race_age__age_45_64__asian,0,0.0
+derived_county_month,cleaned,race_age__age_45_64__black,0,0.0
+derived_county_month,cleaned,race_age__age_45_64__hispanic,0,0.0
+derived_county_month,cleaned,race_age__age_45_64__not_reported,0,0.0
+derived_county_month,cleaned,race_age__age_45_64__white,0,0.0
+derived_county_month,cleaned,race_age__age_65_plus__ai_an,0,0.0
+derived_county_month,cleaned,race_age__age_65_plus__asian,0,0.0
+derived_county_month,cleaned,race_age__age_65_plus__black,0,0.0
+derived_county_month,cleaned,race_age__age_65_plus__hispanic,0,0.0
+derived_county_month,cleaned,race_age__age_65_plus__not_reported,0,0.0
+derived_county_month,cleaned,race_age__age_65_plus__white,0,0.0
+derived_county_month,cleaned,month_of_eligibility_parsed,0,0.0
+derived_county_month,cleaned,county_clean,0,0.0
+derived_county_month,cleaned,date_of_data_parsed,6788,58.5
+derived_county_month,cleaned,is_date_of_data_placeholder,0,0.0
+derived_county_month,cleaned,is_preliminary_status,0,0.0
+derived_county_month,cleaned,is_invalid_county_code,0,0.0
+derived_county_month,cleaned,county_total_is_complete_parsed,0,0.0
+derived_county_month,cleaned,county_total_eligibles_parsed,89,0.77
+derived_county_month,cleaned,age_sex_suppressed_cells_parsed,0,0.0
+derived_county_month,cleaned,language_suppressed_cells_parsed,0,0.0
+derived_county_month,cleaned,race_age_suppressed_cells_parsed,0,0.0
+derived_county_month,cleaned,age_sex__age_00_18__female_parsed,3,0.03
+derived_county_month,cleaned,age_sex__age_00_18__male_parsed,3,0.03
+derived_county_month,cleaned,age_sex__age_19_44__female_parsed,3,0.03
+derived_county_month,cleaned,age_sex__age_19_44__male_parsed,3,0.03
+derived_county_month,cleaned,age_sex__age_45_64__female_parsed,3,0.03
+derived_county_month,cleaned,age_sex__age_45_64__male_parsed,3,0.03
+derived_county_month,cleaned,age_sex__age_65_plus__female_parsed,88,0.76
+derived_county_month,cleaned,age_sex__age_65_plus__male_parsed,89,0.77
+derived_county_month,cleaned,language__asl_parsed,5677,48.93
+derived_county_month,cleaned,language__arabic_parsed,4909,42.31
+derived_county_month,cleaned,language__armenian_parsed,8402,72.41
+derived_county_month,cleaned,language__cambodian_parsed,6600,56.88
+derived_county_month,cleaned,language__cantonese_parsed,4794,41.32
+derived_county_month,cleaned,language__english_parsed,4,0.03
+derived_county_month,cleaned,language__farsi_parsed,5772,49.75
+derived_county_month,cleaned,language__french_parsed,8534,73.55
+derived_county_month,cleaned,language__hebrew_parsed,10799,93.07
+derived_county_month,cleaned,language__hindi_parsed,11233,96.81
+derived_county_month,cleaned,language__hmong_parsed,6868,59.19
+derived_county_month,cleaned,language__ilocano_parsed,8541,73.61
+derived_county_month,cleaned,language__italian_parsed,10345,89.16
+derived_county_month,cleaned,language__japanese_parsed,8879,76.52
+derived_county_month,cleaned,language__korean_parsed,5962,51.38
+derived_county_month,cleaned,language__lao_parsed,6224,53.64
+derived_county_month,cleaned,language__mandarin_parsed,5210,44.9
+derived_county_month,cleaned,language__mien_parsed,9192,79.22
+derived_county_month,cleaned,language__missing_unknown_parsed,537,4.63
+derived_county_month,cleaned,language__other_chinese_parsed,6881,59.3
+derived_county_month,cleaned,language__other_non_eng_parsed,3666,31.6
+derived_county_month,cleaned,language__other_sign_parsed,9097,78.4
+derived_county_month,cleaned,language__polish_parsed,9980,86.01
+derived_county_month,cleaned,language__portuguese_parsed,7026,60.55
+derived_county_month,cleaned,language__punjabi_parsed,11141,96.02
+derived_county_month,cleaned,language__russian_parsed,5442,46.9
+derived_county_month,cleaned,language__samoan_parsed,7748,66.78
+derived_county_month,cleaned,language__spanish_parsed,221,1.9
+derived_county_month,cleaned,language__tagalog_parsed,4706,40.56
+derived_county_month,cleaned,language__thai_parsed,8150,70.24
+derived_county_month,cleaned,language__turkish_parsed,9335,80.45
+derived_county_month,cleaned,language__unknown_parsed,9912,85.43
+derived_county_month,cleaned,language__vietnamese_parsed,4101,35.34
+derived_county_month,cleaned,race_age__age_00_18__ai_an_parsed,811,6.99
+derived_county_month,cleaned,race_age__age_00_18__asian_parsed,1326,11.43
+derived_county_month,cleaned,race_age__age_00_18__black_parsed,1662,14.32
+derived_county_month,cleaned,race_age__age_00_18__hispanic_parsed,245,2.11
+derived_county_month,cleaned,race_age__age_00_18__not_reported_parsed,325,2.8
+derived_county_month,cleaned,race_age__age_00_18__white_parsed,120,1.03
+derived_county_month,cleaned,race_age__age_19_44__ai_an_parsed,459,3.96
+derived_county_month,cleaned,race_age__age_19_44__asian_parsed,1105,9.52
+derived_county_month,cleaned,race_age__age_19_44__black_parsed,1277,11.01
+derived_county_month,cleaned,race_age__age_19_44__hispanic_parsed,247,2.13
+derived_county_month,cleaned,race_age__age_19_44__not_reported_parsed,598,5.15
+derived_county_month,cleaned,race_age__age_19_44__white_parsed,55,0.47
+derived_county_month,cleaned,race_age__age_45_64__ai_an_parsed,1000,8.62
+derived_county_month,cleaned,race_age__age_45_64__asian_parsed,1718,14.81
+derived_county_month,cleaned,race_age__age_45_64__black_parsed,2123,18.3
+derived_county_month,cleaned,race_age__age_45_64__hispanic_parsed,461,3.97
+derived_county_month,cleaned,race_age__age_45_64__not_reported_parsed,425,3.66
+derived_county_month,cleaned,race_age__age_45_64__white_parsed,115,0.99
+derived_county_month,cleaned,race_age__age_65_plus__ai_an_parsed,3246,27.98
+derived_county_month,cleaned,race_age__age_65_plus__asian_parsed,2420,20.86
+derived_county_month,cleaned,race_age__age_65_plus__black_parsed,4089,35.24
+derived_county_month,cleaned,race_age__age_65_plus__hispanic_parsed,736,6.34
+derived_county_month,cleaned,race_age__age_65_plus__not_reported_parsed,594,5.12
+derived_county_month,cleaned,race_age__age_65_plus__white_parsed,192,1.65

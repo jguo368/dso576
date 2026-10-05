@@ -1,0 +1,2 @@
+validation,expected_relationship,source_unique_keys,derived_unique_keys,matched_keys,source_only_keys,derived_only_keys,row_multiplication_risk
+language source non-statewide keys versus derived county-month keys,one_to_one after deduplicating language categories within each county-month,11603,11603,11603,0,0,none: validate=one_to_one passed

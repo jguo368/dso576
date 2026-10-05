@@ -1,0 +1,51 @@
+dataset,month,county_raw,county_clean,category_raw,category_clean,total_raw,total_parsed,status,date_raw,invalid_county
+language,2025-06,Alameda,Alameda, Unknown,Unknown,"2,255",2255,F,11JUN2026,False
+language,2025-06,Amador,Amador, Unknown,Unknown,,,F,11JUN2026,False
+language,2025-06,Butte,Butte, Unknown,Unknown,82,82,F,11JUN2026,False
+language,2025-06,Calaveras,Calaveras, Unknown,Unknown,,,F,11JUN2026,False
+language,2025-06,Colusa,Colusa, Unknown,Unknown,,,F,11JUN2026,False
+language,2026-08,Alameda,Alameda,Hebrew,Hebrew,,,P,11AUG2026,False
+language,2026-08,Alameda,Alameda,Hmong,Hmong,,,P,11AUG2026,False
+language,2026-08,Alameda,Alameda,Italian,Italian,,,P,11AUG2026,False
+language,2026-08,Alameda,Alameda,Polish,Polish,,,P,11AUG2026,False
+language,2026-08,Alpine,Alpine,English,English, ,,P,11AUG2026,False
+language,2019-09,Alameda,Alameda,ASL,ASL,153,153,F,        .,False
+language,2019-09,Alameda,Alameda,Arabic,Arabic,"2,851",2851,F,        .,False
+language,2019-09,Alameda,Alameda,Armenian,Armenian,45,45,F,        .,False
+language,2019-09,Alameda,Alameda,Cambodian,Cambodian,998,998,F,        .,False
+language,2019-09,Alameda,Alameda,Cantonese,Cantonese,"26,289",26289,F,        .,False
+language,2010-01,Alameda,Alameda,ASL,ASL,112,112,F,,False
+language,2010-01,Alameda,Alameda,Arabic,Arabic,"1,189",1189,F,,False
+language,2010-01,Alameda,Alameda,Armenian,Armenian,28,28,F,,False
+language,2010-01,Alameda,Alameda,Cambodian,Cambodian,"1,093",1093,F,,False
+language,2010-01,Alameda,Alameda,Cantonese,Cantonese,"12,983",12983,F,,False
+language,2010-01,Alameda,Alameda,English,English,"130,236",130236,F,,False
+language,2010-01,Alameda,Alameda,Farsi,Farsi,"2,595",2595,F,,False
+language,2010-01,Alameda,Alameda,French,French,50,50,F,,False
+language,2010-01,Alameda,Alameda,Hebrew,Hebrew,15,15,F,,False
+language,2010-01,Alameda,Alameda,Hmong,Hmong,,,F,,False
+derived_county_month,2010-12,Invalid County Code,Invalid County Code,,,,,F,,True
+derived_county_month,2011-12,Invalid County Code,Invalid County Code,,,,,F,,True
+derived_county_month,2025-09,Invalid County Code,Invalid County Code,,,,,P,11AUG2026,True
+derived_county_month,2025-09,Alameda,Alameda,,,498639,498639,P,11AUG2026,False
+derived_county_month,2025-09,Alpine,Alpine,,,,,P,11AUG2026,False
+derived_county_month,2025-09,Amador,Amador,,,9454,9454,P,11AUG2026,False
+derived_county_month,2025-09,Butte,Butte,,,86197,86197,P,11AUG2026,False
+derived_county_month,2025-09,Calaveras,Calaveras,,,14002,14002,P,11AUG2026,False
+derived_county_month,2025-09,Colusa,Colusa,,,10573,10573,P,11AUG2026,False
+derived_county_month,2025-09,Contra Costa,Contra Costa,,,338796,338796,P,11AUG2026,False
+derived_county_month,2010-01,Alpine,Alpine,,,,,F,,False
+derived_county_month,2010-02,Alpine,Alpine,,,,,F,,False
+derived_county_month,2010-03,Alpine,Alpine,,,,,F,,False
+derived_county_month,2010-04,Alpine,Alpine,,,,,F,,False
+derived_county_month,2010-05,Alpine,Alpine,,,,,F,,False
+derived_county_month,2019-07,Alameda,Alameda,,,412273,412273,F,        .,False
+derived_county_month,2019-07,Alpine,Alpine,,,301,301,F,        .,False
+derived_county_month,2019-07,Amador,Amador,,,7726,7726,F,        .,False
+derived_county_month,2019-07,Butte,Butte,,,78432,78432,F,        .,False
+derived_county_month,2019-07,Calaveras,Calaveras,,,11960,11960,F,        .,False
+derived_county_month,2010-01,Alameda,Alameda,,,237141,237141,F,,False
+derived_county_month,2010-01,Amador,Amador,,,4148,4148,F,,False
+derived_county_month,2010-01,Butte,Butte,,,50283,50283,F,,False
+derived_county_month,2010-01,Calaveras,Calaveras,,,6272,6272,F,,False
+derived_county_month,2010-01,Colusa,Colusa,,,4677,4677,F,,False
