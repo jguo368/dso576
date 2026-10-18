@@ -26,13 +26,13 @@ From the repository root, after installing `requirements.txt`:
 
 ```bash
 # Download the three pinned official source files and rebuild the canonical CSV.
-python -m medi_cal_analysis.cleaning --download
+.venv/bin/python -m medi_cal_analysis.cleaning --download
 
 # Rebuild from local raw files without network access.
-python -m medi_cal_analysis.cleaning
+.venv/bin/python -m medi_cal_analysis.cleaning
 
 # Write a candidate and compare with the current canonical file before replacing it.
-python -m medi_cal_analysis.cleaning --output outputs/candidate.csv \
+.venv/bin/python -m medi_cal_analysis.cleaning --output outputs/candidate.csv \
   --report outputs/candidate_audit.json \
   --compare dso576/project/medi_cal_merged_county_month.csv
 ```
@@ -69,11 +69,13 @@ separate summaries; joining them by county-month creates no individual cross-tab
 
 ## Reconciliation of available individual and team work
 
-The repository includes an individual language-cleaning output at
+The local workspace contains an individual language-cleaning output at
 `outputs/language_cleaning/cleaned_language_eligibles.csv` and a team merged
 snapshot committed as `f8d28e9` by Fangning Xu. Both describe the earlier
 January 2010–August 2026 release. The individual Python source is absent;
 the `.pyc` cache is not a reproducible source file and was not executed.
+The individual CSV is ignored by Git and is not included in a fresh clone;
+the committed reconciliation report preserves the comparison and artifact hashes.
 
 The individual output contains 251,535 long-format rows. Its 251,331 map-eligible
 language cells match the team snapshot's corresponding values and missingness
@@ -85,7 +87,9 @@ the cleaning step instead of relying on a runtime filter.
 
 [The reconciliation report](outputs/reconciliation_report.json) records this
 comparison. With the individual artifact still available locally, reproduce it
-using `python scripts/reconcile_language_output.py`. The script reads the earlier
+using `.venv/bin/python scripts/reconcile_language_output.py`. Supply the individual
+CSV at the documented path (or pass `--individual /path/to/file.csv`) to rerun
+this optional comparison in another clone. The script reads the earlier
 team snapshot from Git history and records both artifact hashes. This verifies
 the available outputs. Individual age/sex and race/ethnicity cleaning scripts
 were not supplied for independent comparison. Full-team approval of the shared

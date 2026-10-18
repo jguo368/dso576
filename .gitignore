@@ -4,3 +4,4 @@ __pycache__/
 *.py[cod]
 .venv/
 outputs/dashboard_preview.json
+.DS_Store

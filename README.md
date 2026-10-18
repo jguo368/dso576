@@ -15,9 +15,10 @@ python3 -m venv .venv
 .venv/bin/python -m medi_cal_analysis
 ```
 
-An existing `.venv` is already available in this workspace; use it directly.
-Python 3.11+ is supported. Dependencies are pandas and NumPy; no database,
-credentials, notebook state, or network access is required for these commands.
+In this workspace an existing `.venv` is available; use it directly. A fresh
+clone should create the environment and install dependencies as shown above.
+Python 3.11+ is supported; dependencies are pandas and NumPy. After installation,
+tests and backend export run offline without a database, credentials, or notebook state.
 The final command exports every dashboard backend output for the latest month,
 Spanish, and Los Angeles to `outputs/dashboard_preview.json`. Missing values
 serialize as JSON null, never zero.
@@ -31,7 +32,7 @@ serialize as JSON null, never zero.
 
 | Deliverable | Location |
 | --- | --- |
-| Authoritative dashboard specification | [BUILD_SPEC](dso576/project/BUILD_SPEC.md) |
+| Authoritative dashboard specification | [BUILD_SPEC.md](BUILD_SPEC.md) |
 | Canonical data: 11,658 rows, 58 counties, January 2010–September 2026 | [County-month CSV](dso576/project/medi_cal_merged_county_month.csv) |
 | Reproducible raw-source cleaning and source audit | [CLEANING.md](CLEANING.md), [cleaning.py](medi_cal_analysis/cleaning.py), [audit](outputs/cleaning_report.json) |
 | Reusable backend and input/output examples | [ANALYSIS.md](ANALYSIS.md), [medi_cal_analysis](medi_cal_analysis/) |

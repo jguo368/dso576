@@ -4,7 +4,7 @@
 
 - **Specification:** complete product behavior, use cases, metric definitions,
   missing-data rules, architecture, technology choices, build order, and concrete
-  acceptance checks are in `dso576/project/BUILD_SPEC.md`.
+  acceptance checks are in the root `BUILD_SPEC.md`.
 - **Canonical data:** rebuilt from three same-release official DHCS resources;
   11,658 unique county-month rows, 58 counties, 201 months through September 2026.
   Source hashes, exclusions, and differences from the earlier team snapshot are
@@ -56,7 +56,7 @@ that its finding was resolved with no further defect found.
 
 A separate command-line rebuild produced a byte-identical canonical CSV, SHA-256
 `8bd21b92046753bee440ef290192b8b260fb317953e2e2fca553ff2e3f46d803`.
-The final suite passed 22 tests in 3.577 seconds using Python 3.13.15, pandas
+The initial verification suite passed 22 tests in 3.577 seconds using Python 3.13.15, pandas
 2.3.3, and NumPy 2.5.3. `git diff --check` also passed.
 
 The command-line cold-start export (`python -m medi_cal_analysis`) generates
@@ -70,6 +70,27 @@ month, providing a real all-unavailable case for Phase 3.
 No interface/browser test is claimed: the dashboard and its interaction checks
 belong to Phase 3. The independent review assessed build readiness and backend
 correctness, not a finished dashboard.
+
+## Pre-submission review — October 18, 2026
+
+- The full authoritative specification is now the root `BUILD_SPEC.md`;
+  the old nested path links to it. Repetition was reduced while retaining the
+  product, data, metric, interaction, architecture, and acceptance decisions.
+- A tracked-files-only temporary checkout passed all 22 tests in 3.343 seconds
+  and exported all backend outputs to strict JSON using the existing dependency
+  environment. It contained neither raw downloads nor the local individual
+  language-cleaning artifact, confirming that runtime use does not depend on them.
+- A fresh rebuild matched every canonical value, type, missing value, and CSV
+  byte. Source hashes and audit counts also matched the committed report.
+- The real-data integration test now checks 58 counties in every available month.
+  Local documentation links and text encodings were checked; the canonical CSV
+  is tracked. `.DS_Store` is ignored.
+- Setup documentation now distinguishes dependency installation from offline
+  tests/export. Optional reconciliation explicitly requires the individual CSV
+  to be supplied in a fresh clone. Commands consistently use the project environment.
+- The independent reviewer checked the final documentation and shortened root
+  spec. A wording ambiguity about demographic summaries was corrected; no
+  remaining runtime or build-readiness blocker was found.
 
 ## Human submission steps
 

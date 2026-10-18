@@ -1,15 +1,15 @@
 # Phase 2 reusable analysis
 
 `medi_cal_analysis` implements the backend requirements in
-[`BUILD_SPEC.md`](dso576/project/BUILD_SPEC.md), including its metric and architecture contracts.
+[`BUILD_SPEC.md`](BUILD_SPEC.md), including its metric and architecture contracts.
 It has no dashboard framework dependency. Phase 3 can consume its DataFrames
 directly for the selectors, map, rankings, overview KPIs, and county detail.
 
 Run from the repository root (`project/`):
 
 ```bash
-python -m pip install -r requirements.txt
-python -m unittest discover -s tests -v
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m unittest discover -s tests -v
 ```
 
 The existing environment can run the checks with

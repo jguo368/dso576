@@ -87,7 +87,7 @@ def _numeric_counts(values: pd.Series, *, allow_missing: bool = True) -> pd.Seri
 def prepare_data(raw: pd.DataFrame) -> pd.DataFrame:
     """Return a validated copy with one row per California county-month.
 
-    Documented exclusions (BUILD_SPEC 7.6): missing/invalid months and any
+    Documented exclusions (BUILD_SPEC data contract): missing/invalid months and any
     county label outside the 58 California counties, including statewide
     summaries and 'Invalid County Code'. No other rows are excluded. Counts
     remain nullable; suppression never becomes zero. Duplicate keys raise.

@@ -262,6 +262,7 @@ class CanonicalDataTests(unittest.TestCase):
         original = data.copy(deep=True)
         self.assertFalse(data.duplicated(["month_of_eligibility", "county"]).any())
         self.assertTrue(data["county"].isin(CALIFORNIA_COUNTIES).all())
+        self.assertTrue(data.groupby("month_of_eligibility")["county"].nunique().eq(58).all())
         self.assertEqual(data.attrs["preparation_report"]["output_rows"], len(data))
         months = analysis.get_available_months(data)
         for month in (months[0], months[-1]):
