@@ -62,7 +62,7 @@ Exact URLs, source hashes, exclusions, and snapshot comparison are in `outputs/c
 - `county_total_eligibles` is the sum of all eight age/sex cells only when every required cell is observed. Otherwise it is missing and `county_total_is_complete` is False. Completeness is a Boolean, not truthiness of a CSV string. The checked snapshot has 85 incomplete totals.
 - Available source counts are retained; do not recover or estimate suppressed values by subtraction. Population dimensions are separate county summaries, not an individual language-by-age-by-race cross-tabulation.
 
-`CLEANING.md` records available team artifacts and unresolved team-review evidence. Do not represent unavailable individual cleaning scripts or absent teammate approval as verified agreement.
+`CLEANING.md` records full-team agreement at the October 18, 2026, 2:45 p.m. PDT meeting and the available artifact comparisons. Individual age/sex and race/ethnicity scripts were not supplied for independent comparison.
 
 ## Metric and visual definitions
 

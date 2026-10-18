@@ -7,6 +7,19 @@ January 2010–September 2026, 58 California counties, 11,658 rows, 74 columns.
 Exact source URLs, byte sizes, SHA-256 hashes, and counts are in
 [the cleaning audit](outputs/cleaning_report.json).
 
+## Team cleaning agreement
+
+**Meeting:** October 18, 2026, at 2:45 p.m. PDT (America/Los_Angeles).
+**Agreement:** All team members agreed to the shared cleaning rules documented
+in this file, as confirmed by a team member in this project session.
+
+The agreed approach covers the county-month unit of analysis, duplicate handling,
+missing and suppressed counts, data types, standardized labels, one-to-one joins,
+exclusions, and derived county totals and language shares. These rules govern the
+canonical January 2010–September 2026 dataset and the analysis backend.
+
+The artifact comparisons supporting these decisions are documented below.
+
 ## Rebuild
 
 From the repository root, after installing `requirements.txt`:
@@ -74,10 +87,10 @@ the cleaning step instead of relying on a runtime filter.
 comparison. With the individual artifact still available locally, reproduce it
 using `python scripts/reconcile_language_output.py`. The script reads the earlier
 team snapshot from Git history and records both artifact hashes. This verifies
-the available outputs; individual age/sex and
-race/ethnicity cleaning scripts and a record of all teammates' agreement were
-not supplied. Do not claim that those scripts were compared or that teammates
-signed off. Team review of the documented rules remains a human submission step.
+the available outputs. Individual age/sex and race/ethnicity cleaning scripts
+were not supplied for independent comparison. Full-team approval of the shared
+rules was subsequently confirmed for the meeting recorded above; the unavailable
+scripts are not represented as independently compared.
 
 ## Refresh from the earlier team snapshot
 

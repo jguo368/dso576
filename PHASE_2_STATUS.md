@@ -12,6 +12,9 @@
 - **Reconciliation evidence:** 251,331 eligible individual language cells agree
   exactly with the earlier team snapshot. No numerical or missingness conflicts
   were found. See `CLEANING.md` and `outputs/reconciliation_report.json`.
+- **Team cleaning agreement:** all team members agreed to the documented rules
+  at the October 18, 2026, 2:45 p.m. PDT meeting, as confirmed by a team member.
+  The meeting record is in `CLEANING.md`.
 - **Backend:** all planned selector, overview, map, ranking, county detail,
   language-share, age/sex, and race/ethnicity outputs are reusable functions.
 - **Verification:** automated contract, metric, raw-cleaning, and real-data
@@ -70,11 +73,11 @@ correctness, not a finished dashboard.
 
 ## Human submission steps
 
-The available artifacts support an output-level comparison. Individual age/sex
-and race/ethnicity cleaning scripts and a record of unanimous teammate approval
-were not supplied. The team should review and confirm the documented cleaning
-rules before claiming that the assignment's team agreement step is complete.
-No teammate confirmation is fabricated.
+Full-team agreement on the documented cleaning rules is recorded in `CLEANING.md`
+for the October 18, 2026, 2:45 p.m. PDT meeting. The agreement confirmation step
+is complete. Individual age/sex and race/ethnicity cleaning scripts remain
+unavailable for independent artifact-level comparison; the automated
+reconciliation report describes the comparisons actually performed.
 
 These deliverables are prepared on local `main`; identify the handoff commit with
 `git log -1`. No remote push, teammate message, or course submission is performed.
