@@ -1,0 +1,16 @@
+{
+  "local_artifact": "outputs/language_cleaning/cleaned_language_eligibles.csv",
+  "local_artifact_sha256": "d765dc6d595817ed4ad3cda03b39d364ef22fbcff8d8fdf707b84258d3ee804a",
+  "team_artifact_git_revision": "f8d28e9:dso576/project/medi_cal_merged_county_month.csv",
+  "team_artifact_sha256": "94c9eb823476311f46b9a5645407739c58ee14bccbefdd558ef3849df54289d8",
+  "local_rows": 251535,
+  "local_map_eligible_rows": 251331,
+  "matched_source_cells": 251331,
+  "unmatched_individual_cells": 0,
+  "different_counts_or_missingness": 0,
+  "local_suppressed_count_with_numeric_value": 0,
+  "limitations": [
+    "Individual age/sex and race/ethnicity cleaning scripts were not provided.",
+    "Output agreement does not establish all teammates reviewed or approved a shared cleaning approach."
+  ]
+}

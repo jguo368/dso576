@@ -1,0 +1,85 @@
+{
+  "language": {
+    "input_rows": 252883,
+    "invalid_month_rows": 0,
+    "invalid_county_rows": 205,
+    "excluded_rows": 205,
+    "retained_source_rows": 252678,
+    "county_months": 11658,
+    "suppressed_cells": 94823,
+    "missing_unannotated_source_cells": 0,
+    "absent_category_cells": 132036,
+    "category_columns": 33
+  },
+  "age_sex": {
+    "input_rows": 93469,
+    "invalid_month_rows": 0,
+    "invalid_county_rows": 205,
+    "excluded_rows": 205,
+    "retained_source_rows": 93264,
+    "county_months": 11658,
+    "suppressed_cells": 170,
+    "missing_unannotated_source_cells": 0,
+    "absent_category_cells": 0,
+    "category_columns": 8
+  },
+  "race_age": {
+    "input_rows": 277217,
+    "invalid_month_rows": 0,
+    "invalid_county_rows": 205,
+    "excluded_rows": 205,
+    "retained_source_rows": 277012,
+    "county_months": 11658,
+    "suppressed_cells": 22591,
+    "missing_unannotated_source_cells": 0,
+    "absent_category_cells": 2780,
+    "category_columns": 24
+  },
+  "canonical": {
+    "rows": 11658,
+    "columns": 74,
+    "months": 201,
+    "first_month": "2010-01",
+    "last_month": "2026-09",
+    "counties": 58,
+    "duplicate_keys": 0,
+    "incomplete_county_totals": 85,
+    "counties_per_month": {
+      "58": 201
+    },
+    "missing_california_counties": []
+  },
+  "sources": {
+    "language": {
+      "url": "https://data.chhs.ca.gov/dataset/8c897320-ba87-4574-bc37-bae974191c35/resource/b698c8d7-aacd-43c6-a7dd-737ff5692284/download/t5_eligibility_by_language_201001_sept2026.csv",
+      "file": "language.csv",
+      "bytes": 13086110,
+      "sha256": "0e24a3d906bfb6b000632714739563f7800582bef08682cfeafa2f1f2c9efcae"
+    },
+    "age_sex": {
+      "url": "https://data.chhs.ca.gov/dataset/8c897320-ba87-4574-bc37-bae974191c35/resource/cc08b60f-393f-4e37-9b3e-976d7a9f2a72/download/t1_eligibility_by_age_group_sex_201001_sept2026.csv",
+      "file": "age_sex.csv",
+      "bytes": 4636307,
+      "sha256": "d5141b1b417e0cbc48ef5027cd3611f1d621a9c8fa0646fbe385e306ff4e8287"
+    },
+    "race_age": {
+      "url": "https://data.chhs.ca.gov/dataset/8c897320-ba87-4574-bc37-bae974191c35/resource/29a8f949-5c12-4e42-92db-39fa5ea12b8e/download/t4_eligibility_by_race_ethnicity_age_group_201001_sept2026.csv",
+      "file": "race_age.csv",
+      "bytes": 14434853,
+      "sha256": "3a76be5225f0a7d6e37729d91a99e89470a76ca17dd85b16c1e5f748ce695094"
+    }
+  },
+  "generated_at_utc": "2026-10-18T22:11:07.595985+00:00",
+  "previous_snapshot_comparison": {
+    "previous_valid_rows": 11600,
+    "common_rows": 11600,
+    "added_rows": 58,
+    "removed_rows": 0,
+    "changed_demographic_cells_by_family": {
+      "language": 7396,
+      "age_sex": 4346,
+      "race_age": 13170
+    },
+    "note": "Official source snapshots differ in vintage; changed cells are reported, not inferred or overwritten with estimates."
+  }
+}

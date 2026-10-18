@@ -1,2 +1,6 @@
 *.csv
 .ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.venv/
+outputs/dashboard_preview.json
