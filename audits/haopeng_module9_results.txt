@@ -1,0 +1,209 @@
+Auditor: Haopeng Chen; Phase 2 backend only; no dashboard test
+Commit: 3afb82b57ca9863a921eae805541846c4d561e46
+Python: 3.13.3 pandas: 3.0.5 numpy: 2.5.2
+Canonical path: dso576/project/medi_cal_merged_county_month.csv
+Canonical SHA256: 8bd21b92046753bee440ef290192b8b260fb317953e2e2fca553ff2e3f46d803
+BUILD_SPEC requirements: descending counts; alphabetical ties; competition ranks; missing last/unranked; observed subtotal with coverage; complete total requires 58 observed counties.
+Inspected existing tests: tests/test_analysis.py — test_ranking_ties_zero_and_missing, test_month_summary_reports_partial_coverage, test_full_coverage_summary_uses_totals_not_average_shares, test_all_mvp_outputs_from_team_csv.
+
+AVAILABLE BRANCH CLAIM SEARCH (local refs at execution time):
+refs/heads/Cleaning-haopeng candidate audit/claim files: []
+refs/heads/Haopeng candidate audit/claim files: []
+refs/heads/haopeng-chen candidate audit/claim files: []
+refs/heads/main candidate audit/claim files: []
+refs/remotes/origin/HEAD candidate audit/claim files: ['ANALYSIS.md']
+refs/remotes/origin/Hsin-classc candidate audit/claim files: []
+refs/remotes/origin/Jonathan candidate audit/claim files: []
+refs/remotes/origin/Shawn-Shih candidate audit/claim files: []
+refs/remotes/origin/fennie-project change-requests.md
+ # Change requests
+
+## Claims
+
+| Auditor | Feature audited | Number audited | Evidence contributed |
+|---|---|---|---|
+| Fangning Xu | Suppression-preserving language-count cleaning | County-month key coverage (11,603 unique keys) | `cleaning/audit_module9_check.py` independently checks the source record and key sets. |
+
+## Findings
+
+### CR-009-01 - Suppressed language counts remain unavailable
+
+- **Status:** Verified; no code change requested.
+- **Finding:** The source record `2026-08 | Alameda | Hebrew` has a blank `Total Eligibles` value and the annotation `Cell suppressed for small numbers`. The cleaning workflow parses that blank as a missing value rather than zero.
+- **Evidence:** `cleaning/audit_module9_check.py` verifies the raw record and annotation. `cleaning/outputs/record_checks.csv` records the cleaned result as `parsed=<NA>`.
+- **Why it matters:** Treating a suppressed value as zero would understate a language population and could distort county prioritization.
+- **Remaining uncertainty:** This check establishes the handling of the selected record; it does not independently test every suppression annotation or the downstream dashboard display.
+
+### CR-009-02 - County-month key coverage matches the language source
+
+- **Status:** Verified; no code change requested.
+- **Finding:** The non-statewide language source and the derived county-month table each contain 11,603 unique `(month, county)` keys, with zero keys found only on either side.
+- **Evidence:** `python cleaning/audit_module9_check.py` performs a separate standard-library CSV set comparison. It agrees with `cleaning/outputs/merge_validation.csv`.
+- **Why it matters:** Matching coverage supports use of the derived table at the county-month grain and reduces the risk of silently dropping or adding county-month records.
+- **Remaining uncertainty:** Key coverage does not prove that every derived measure is numerically correct or that categories were aggregated according to the intended policy.
+
+refs/remotes/origin/fennie-project candidate audit/claim files: ['change-requests.md', 'cleaning/audit_module9_check.py']
+refs/remotes/origin/haopeng-chen candidate audit/claim files: []
+refs/remotes/origin/main candidate audit/claim files: ['ANALYSIS.md']
+Working-tree claim:
+# Team change requests
+
+Copy this template into your team's repository if no shared change-request file exists. Do not replace an existing file. Keep your individual audit in the module folder.
+
+## Claims
+
+| Author | Feature | Number | Distinct scope or new evidence |
+| --- | --- | --- | --- |
+| Haopeng Chen | County Ranking — descending order, alphabetical tie-breaking, and competition ranking, implemented in get_county_ranking(). | September 2026 Spanish observed eligible subtotal, independently calculated from the canonical CSV and compared against get_month_summary(). | Phase 2 backend only. The Phase 3 dashboard has not been implemented. |
+
+## Requests
+
+Copy the following block for each actionable finding. Agree on a unique ID with your team. A check that finds no defect can stay in the individual audit; do not invent a bug to fill a request.
+
+### AUDIT-XX Short description
+
+- Author:
+- Status: open
+- App version or commit checked:
+- Feature and intended behavior:
+- Inputs and reproduction steps:
+- Expected result:
+- Actual result:
+- Evidence and likely cause, if established:
+- Requested change:
+- Verification check:
+- Implementation commit and verification result, when built:
+
+## Follow through
+
+One teammate can ask Codex to implement open requests one at a time. For each, rerun the evidence, commit with its ID, and mark it built only after checking the result. File a request rather than undoing someone else's work.
+
+Limitations: only published/fetched branches and available working files; cannot inspect teammates' unpushed/local work, private files, Brightspace, or verbal claims. Search is file/name/content based; absence is not proof of no claim.
+
+SIGNATURES: (data: pandas.DataFrame, month: str, language: str, *, limit: int | None = None) -> pandas.DataFrame (data: pandas.DataFrame, month: str, language: str) -> pandas.DataFrame
+CSV shape: (11658, 74) columns: ['month_of_eligibility', 'county', 'status', 'date_of_data', 'county_total_eligibles', 'county_total_is_complete', 'age_sex_suppressed_cells', 'language_suppressed_cells', 'race_age_suppressed_cells', 'age_sex__age_00_18__female', 'age_sex__age_00_18__male', 'age_sex__age_19_44__female', 'age_sex__age_19_44__male', 'age_sex__age_45_64__female', 'age_sex__age_45_64__male', 'age_sex__age_65_plus__female', 'age_sex__age_65_plus__male', 'language__arabic', 'language__armenian', 'language__asl', 'language__cambodian', 'language__cantonese', 'language__english', 'language__farsi', 'language__french', 'language__hebrew', 'language__hindi', 'language__hmong', 'language__ilocano', 'language__italian', 'language__japanese', 'language__korean', 'language__lao', 'language__mandarin', 'language__mien', 'language__missing_unknown', 'language__other_chinese', 'language__other_non_eng', 'language__other_sign', 'language__polish', 'language__portuguese', 'language__punjabi', 'language__russian', 'language__samoan', 'language__spanish', 'language__tagalog', 'language__thai', 'language__turkish', 'language__unknown', 'language__vietnamese', 'race_age__age_00_18__ai_an', 'race_age__age_00_18__asian', 'race_age__age_00_18__black', 'race_age__age_00_18__hispanic', 'race_age__age_00_18__not_reported', 'race_age__age_00_18__white', 'race_age__age_19_44__ai_an', 'race_age__age_19_44__asian', 'race_age__age_19_44__black', 'race_age__age_19_44__hispanic', 'race_age__age_19_44__not_reported', 'race_age__age_19_44__white', 'race_age__age_45_64__ai_an', 'race_age__age_45_64__asian', 'race_age__age_45_64__black', 'race_age__age_45_64__hispanic', 'race_age__age_45_64__not_reported', 'race_age__age_45_64__white', 'race_age__age_65_plus__ai_an', 'race_age__age_65_plus__asian', 'race_age__age_65_plus__black', 'race_age__age_65_plus__hispanic', 'race_age__age_65_plus__not_reported', 'race_age__age_65_plus__white']
+PASS: independent county keys unique
+
+EXACT NUMBER INPUT: CSV above; month_of_eligibility == 2026-09; language__spanish; county in 58-county contract allowlist; observed values summed with min_count=1.
+Independent expected: {'subtotal': np.float64(3505796.0), 'county_rows': 58, 'observed_counties': np.int64(56), 'missing_value_counties': ['Alpine', 'Mono'], 'absent_counties': []}
+Actual summary columns: ['month_of_eligibility', 'language', 'county_count', 'missing_counties', 'language_count_available_counties', 'language_count_missing_counties', 'language_share_available_counties', 'observed_language_count', 'selected_language_count', 'selected_language_count_is_complete', 'county_total_eligibles', 'county_total_is_complete', 'language_share']
+Actual summary:
+month_of_eligibility language  county_count  missing_counties  language_count_available_counties  language_count_missing_counties  language_share_available_counties  observed_language_count selected_language_count  selected_language_count_is_complete  county_total_eligibles  county_total_is_complete language_share
+             2026-09  spanish            58                 0                                 56                                2                                 56                3505796.0                    <NA>                                False              13134160.0                      True           <NA>
+PASS: number/coverage observed_language_count
+PASS: number/coverage county_count
+PASS: number/coverage missing_counties
+PASS: number/coverage language_count_available_counties
+PASS: number/coverage language_count_missing_counties
+PASS: real input has incomplete language coverage
+PASS: incomplete statewide count flagged false
+PASS: full statewide count unavailable
+PASS: statewide language share unavailable
+
+Actual ranking columns: ['month_of_eligibility', 'county', 'language', 'selected_language_count', 'county_total_eligibles', 'county_total_is_complete', 'language_suppressed_cells', 'age_sex_suppressed_cells', 'race_age_suppressed_cells', 'language_count_is_available', 'language_share', 'language_share_is_available', 'language_share_unavailable_reason', 'rank']
+REAL RANKING exact expected/actual (county, count, competition rank):
+expected= ('Los Angeles', 1129822, 1) actual= ('Los Angeles', 1129822, 1)
+expected= ('Orange', 217362, 2) actual= ('Orange', 217362, 2)
+expected= ('San Diego', 210673, 3) actual= ('San Diego', 210673, 3)
+expected= ('Riverside', 208312, 4) actual= ('Riverside', 208312, 4)
+expected= ('San Bernardino', 179565, 5) actual= ('San Bernardino', 179565, 5)
+expected= ('Kern', 129370, 6) actual= ('Kern', 129370, 6)
+expected= ('Fresno', 121298, 7) actual= ('Fresno', 121298, 7)
+expected= ('Santa Clara', 110599, 8) actual= ('Santa Clara', 110599, 8)
+expected= ('Monterey', 100165, 9) actual= ('Monterey', 100165, 9)
+expected= ('Alameda', 99269, 10) actual= ('Alameda', 99269, 10)
+expected= ('Tulare', 93199, 11) actual= ('Tulare', 93199, 11)
+expected= ('Ventura', 84338, 12) actual= ('Ventura', 84338, 12)
+expected= ('Santa Barbara', 77343, 13) actual= ('Santa Barbara', 77343, 13)
+expected= ('Contra Costa', 75068, 14) actual= ('Contra Costa', 75068, 14)
+expected= ('San Joaquin', 69189, 15) actual= ('San Joaquin', 69189, 15)
+expected= ('Stanislaus', 63802, 16) actual= ('Stanislaus', 63802, 16)
+expected= ('Sacramento', 59731, 17) actual= ('Sacramento', 59731, 17)
+expected= ('San Mateo', 54525, 18) actual= ('San Mateo', 54525, 18)
+expected= ('Imperial', 54205, 19) actual= ('Imperial', 54205, 19)
+expected= ('Merced', 43517, 20) actual= ('Merced', 43517, 20)
+expected= ('San Francisco', 41205, 21) actual= ('San Francisco', 41205, 21)
+expected= ('Sonoma', 40700, 22) actual= ('Sonoma', 40700, 22)
+expected= ('Madera', 28601, 23) actual= ('Madera', 28601, 23)
+expected= ('Solano', 28375, 24) actual= ('Solano', 28375, 24)
+expected= ('Santa Cruz', 27927, 25) actual= ('Santa Cruz', 27927, 25)
+expected= ('Marin', 23572, 26) actual= ('Marin', 23572, 26)
+expected= ('Kings', 18395, 27) actual= ('Kings', 18395, 27)
+expected= ('Napa', 14171, 28) actual= ('Napa', 14171, 28)
+expected= ('San Luis Obispo', 13556, 29) actual= ('San Luis Obispo', 13556, 29)
+expected= ('Yolo', 12284, 30) actual= ('Yolo', 12284, 30)
+expected= ('Sutter', 8947, 31) actual= ('Sutter', 8947, 31)
+expected= ('Mendocino', 7556, 32) actual= ('Mendocino', 7556, 32)
+expected= ('San Benito', 7510, 33) actual= ('San Benito', 7510, 33)
+expected= ('Butte', 6029, 34) actual= ('Butte', 6029, 34)
+expected= ('Placer', 5997, 35) actual= ('Placer', 5997, 35)
+expected= ('Lake', 5643, 36) actual= ('Lake', 5643, 36)
+expected= ('Yuba', 5550, 37) actual= ('Yuba', 5550, 37)
+expected= ('Tehama', 5473, 38) actual= ('Tehama', 5473, 38)
+expected= ('Colusa', 4738, 39) actual= ('Colusa', 4738, 39)
+expected= ('Glenn', 3836, 40) actual= ('Glenn', 3836, 40)
+expected= ('El Dorado', 3596, 41) actual= ('El Dorado', 3596, 41)
+expected= ('Humboldt', 2768, 42) actual= ('Humboldt', 2768, 42)
+expected= ('Shasta', 1864, 43) actual= ('Shasta', 1864, 43)
+expected= ('Nevada', 1842, 44) actual= ('Nevada', 1842, 44)
+expected= ('Siskiyou', 897, 45) actual= ('Siskiyou', 897, 45)
+expected= ('Inyo', 756, 46) actual= ('Inyo', 756, 46)
+expected= ('Calaveras', 575, 47) actual= ('Calaveras', 575, 47)
+expected= ('Del Norte', 468, 48) actual= ('Del Norte', 468, 48)
+expected= ('Amador', 355, 49) actual= ('Amador', 355, 49)
+expected= ('Tuolumne', 354, 50) actual= ('Tuolumne', 354, 50)
+expected= ('Mariposa', 235, 51) actual= ('Mariposa', 235, 51)
+expected= ('Lassen', 209, 52) actual= ('Lassen', 209, 52)
+expected= ('Modoc', 206, 53) actual= ('Modoc', 206, 53)
+expected= ('Plumas', 174, 54) actual= ('Plumas', 174, 54)
+expected= ('Sierra', 48, 55) actual= ('Sierra', 48, 55)
+expected= ('Trinity', 32, 56) actual= ('Trinity', 32, 56)
+expected= ('Alpine', None, None) actual= ('Alpine', None, None)
+expected= ('Mono', None, None) actual= ('Mono', None, None)
+PASS: real descending order/alphabetical ties/competition ranks/missing last
+PASS: ranking preserves exact county coverage
+
+SYNTHETIC exact input:
+month_of_eligibility  county  language__spanish  county_total_eligibles  county_total_is_complete  language_suppressed_cells  age_sex_suppressed_cells  race_age_suppressed_cells
+             2026-09  Amador              100.0                   200.0                      True                          0                         0                          0
+             2026-09   Butte                0.0                   200.0                      True                          0                         0                          0
+             2026-09 Alameda              100.0                   200.0                      True                          0                         0                          0
+             2026-09  Alpine               <NA>                   200.0                      True                          0                         0                          0
+             2026-09  Colusa               50.0                   200.0                      True                          0                         0                          0
+Synthetic expected: [('Alameda', 100, 1), ('Amador', 100, 1), ('Colusa', 50, 3), ('Butte', 0, 4), ('Alpine', None, None)]
+Synthetic actual:   [('Alameda', 100, 1), ('Amador', 100, 1), ('Colusa', 50, 3), ('Butte', 0, 4), ('Alpine', None, None)]
+PASS: synthetic descending order, alphabetical tie, ranks 1/1/3/4, zero observed, NA last/unranked
+PASS: backend did not mutate canonical prepared input
+
+EXISTING SUITE COMMAND: python -m unittest discover -s tests -v (in pinned snapshot)
+test_all_mvp_outputs_from_team_csv (test_analysis.CanonicalDataTests.test_all_mvp_outputs_from_team_csv) ... ok
+test_demographics_aggregate_with_strict_missing_propagation (test_analysis.MetricTests.test_demographics_aggregate_with_strict_missing_propagation) ... ok
+test_full_coverage_summary_uses_totals_not_average_shares (test_analysis.MetricTests.test_full_coverage_summary_uses_totals_not_average_shares) ... ok
+test_invalid_selections_raise_actionable_errors (test_analysis.MetricTests.test_invalid_selections_raise_actionable_errors) ... ok
+test_map_and_detail_are_reusable_copies (test_analysis.MetricTests.test_map_and_detail_are_reusable_copies) ... ok
+test_month_summary_reports_partial_coverage (test_analysis.MetricTests.test_month_summary_reports_partial_coverage) ... ok
+test_ranking_ties_zero_and_missing (test_analysis.MetricTests.test_ranking_ties_zero_and_missing) ... ok
+test_selectors_and_filters (test_analysis.MetricTests.test_selectors_and_filters) ... ok
+test_share_requires_count_and_complete_positive_total (test_analysis.MetricTests.test_share_requires_count_and_complete_positive_total) ... ok
+test_duplicates_after_normalization_raise (test_analysis.PreparationTests.test_duplicates_after_normalization_raise) ... ok
+test_false_string_and_missing_values_are_preserved (test_analysis.PreparationTests.test_false_string_and_missing_values_are_preserved) ... ok
+test_invalid_values_fail_explicitly (test_analysis.PreparationTests.test_invalid_values_fail_explicitly) ... ok
+test_load_from_csv (test_analysis.PreparationTests.test_load_from_csv) ... ok
+test_missing_or_unexpected_demographic_columns_raise (test_analysis.PreparationTests.test_missing_or_unexpected_demographic_columns_raise) ... ok
+test_publication_metadata_is_required_and_normalized (test_analysis.PreparationTests.test_publication_metadata_is_required_and_normalized) ... ok
+test_standardization_exclusions_and_no_input_mutation (test_analysis.PreparationTests.test_standardization_exclusions_and_no_input_mutation) ... ok
+test_comparison_counts_missing_to_observed_and_changed_counts (test_cleaning.RawCleaningTests.test_comparison_counts_missing_to_observed_and_changed_counts) ... ok
+test_duplicate_unknown_and_malformed_source_cells_fail (test_cleaning.RawCleaningTests.test_duplicate_unknown_and_malformed_source_cells_fail) ... ok
+test_exclusions_happen_before_category_validation (test_cleaning.RawCleaningTests.test_exclusions_happen_before_category_validation) ... ok
+test_mismatched_coverage_or_vintage_fails_before_merge (test_cleaning.RawCleaningTests.test_mismatched_coverage_or_vintage_fails_before_merge) ... ok
+test_one_to_one_join_complete_totals_and_observed_zero (test_cleaning.RawCleaningTests.test_one_to_one_join_complete_totals_and_observed_zero) ... ok
+test_primary_complementary_and_absent_cells_remain_unavailable (test_cleaning.RawCleaningTests.test_primary_complementary_and_absent_cells_remain_unavailable) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 3.656s
+
+OK
+
+PASS: existing suite exit status zero
+
+INDIVIDUAL CHECKS: 15 PASS, 0 FAIL
