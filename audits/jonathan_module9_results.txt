@@ -1,0 +1,32 @@
+Jonathan Guo — Module 9 audit result
+Run: PYTHONDONTWRITEBYTECODE=1 python3.13 audits/jonathan_module9_check.py
+Team commit: 3afb82b57ca9863a921eae805541846c4d561e46
+Canonical CSV SHA256: 8bd21b92046753bee440ef290192b8b260fb317953e2e2fca553ff2e3f46d803
+Environment: Python 3.13.5; pandas 2.2.3
+
+Independent Los Angeles county-total calculation
+
+2026-08 age/sex cells:
+548,813 + 578,289 + 705,217 + 588,310 + 410,943 + 350,898 + 324,264 + 213,543
+= 3,720,277
+
+2026-09 age/sex cells:
+536,454 + 565,415 + 687,463 + 572,622 + 403,843 + 343,708 + 319,823 + 209,876
+= 3,639,204
+
+September minus August: -81,073
+
+Backend result
+
+- County-detail totals matched both independent sums.
+- Map, ranking, overview, county detail, age/sex, and race/ethnicity outputs
+  contained only the requested month for both 2026-08 and 2026-09.
+- Backend calls did not mutate the loaded canonical data.
+- Individual audit checks: 29 PASS, 0 FAIL.
+- Existing team test suite: 22 tests passed, 0 failed.
+
+Limitation
+
+The pinned commit has no Phase 3 dashboard implementation. These results verify
+the month-dependent backend and number, not a browser selector or visible chart
+redraw. CR-009-JG-01 records the pending user-interface verification.
