@@ -60,3 +60,9 @@ observed count and a complete positive county total. County demographic context
 describes all county Medi-Cal eligibles, not the selected-language subgroup.
 Population comparisons support investigation; they do not measure interpreter
 capacity or prove a service shortage.
+
+## Local language dashboard
+
+Run `python dashboard.py` from the repository root after installing requirements.
+Open http://127.0.0.1:8050. See [DASHBOARD.md](DASHBOARD.md) for features and data limitations.
+This dashboard uses the bundled language-only snapshot; it is separate from the canonical Phase 2 backend and does not implement every Phase 3 requirement in BUILD_SPEC.md.
