@@ -1,5 +1,7 @@
 # Phase 2 handoff
 
+**Phase 3 update — November 4, 2026:** The local interactive dashboard now uses the canonical backend and provides linked map/table/county selection, shares, demographic context, and trends. See [DASHBOARD.md](DASHBOARD.md) and [browser verification](outputs/dashboard_browser_verification.md). The Phase 2 readiness notes below describe that earlier milestone.
+
 ## Deliverable status
 
 - **Specification:** complete product behavior, use cases, metric definitions,

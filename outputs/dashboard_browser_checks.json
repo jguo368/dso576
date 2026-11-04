@@ -1,0 +1,288 @@
+{
+  "date": "2026-11-04",
+  "scope": "Local browser acceptance checks; source file hashes and unit/API verification are recorded separately.",
+  "checks": [
+    {
+      "name": "Audited default view",
+      "pass": true,
+      "state": {
+        "age": "0–18 yearsFemale536,454Male565,41519–44 yearsFemale687,463Male572,62245–64 yearsFemale403,843Male343,70865+ yearsFemale319,823Male209,876",
+        "county": "Los Angeles",
+        "coverage": "Observed county subtotal3,505,796Published language counts only; coverage shown alongside.Count coverage56 / 58Counties with an observed selected-language count.Share coverage56 / 58Counties with an observed count and valid denominator.",
+        "error": null,
+        "heading": "Los Angeles County",
+        "language": "spanish",
+        "metrics": "Language count1,129,822County total3,639,204Language share31.0%",
+        "month": "2026-09",
+        "notice": "2026-09 · Spanish · Los Angeles selected. All views use the same validated snapshot.",
+        "race": "American Indian/Alaska Native5,674Asian350,369Black366,534Hispanic2,142,968Not reported277,364White496,295",
+        "rowCount": 58,
+        "selectedMap": [
+          "Los Angeles"
+        ],
+        "selectedTable": [
+          "Los Angeles"
+        ]
+      }
+    },
+    {
+      "name": "Map click synchronizes county selector, detail, table, and map",
+      "pass": true,
+      "state": {
+        "age": "0–18 yearsFemale128,573Male136,31519–44 yearsFemale155,764Male129,44245–64 yearsFemale96,891Male78,80365+ yearsFemale77,321Male49,586",
+        "county": "Orange",
+        "coverage": "Observed county subtotal3,505,796Published language counts only; coverage shown alongside.Count coverage56 / 58Counties with an observed selected-language count.Share coverage56 / 58Counties with an observed count and valid denominator.",
+        "error": null,
+        "heading": "Orange County",
+        "language": "spanish",
+        "metrics": "Language count217,362County total852,695Language share25.5%",
+        "month": "2026-09",
+        "notice": "2026-09 · Spanish · Orange selected. All views use the same validated snapshot.",
+        "race": "American Indian/Alaska Native964Asian170,960Black14,376Hispanic398,311Not reported143,582White124,502",
+        "rowCount": 58,
+        "selectedMap": [
+          "Orange"
+        ],
+        "selectedTable": [
+          "Orange"
+        ]
+      }
+    },
+    {
+      "name": "Table county selection",
+      "pass": true
+    },
+    {
+      "name": "Language updates metrics but preserves month/county demographics",
+      "pass": true,
+      "state": {
+        "age": "0–18 yearsFemale536,454Male565,41519–44 yearsFemale687,463Male572,62245–64 yearsFemale403,843Male343,70865+ yearsFemale319,823Male209,876",
+        "county": "Los Angeles",
+        "coverage": "Observed county subtotal102,841Published language counts only; coverage shown alongside.Count coverage36 / 58Counties with an observed selected-language count.Share coverage36 / 58Counties with an observed count and valid denominator.",
+        "error": null,
+        "heading": "Los Angeles County",
+        "language": "mandarin",
+        "metrics": "Language count49,336County total3,639,204Language share1.4%",
+        "month": "2026-09",
+        "notice": "2026-09 · Mandarin · Los Angeles selected. All views use the same validated snapshot.",
+        "race": "American Indian/Alaska Native5,674Asian350,369Black366,534Hispanic2,142,968Not reported277,364White496,295",
+        "rowCount": 58,
+        "selectedMap": [
+          "Los Angeles"
+        ],
+        "selectedTable": [
+          "Los Angeles"
+        ]
+      }
+    },
+    {
+      "name": "Map keyboard Enter selection",
+      "pass": true
+    },
+    {
+      "name": "Table keyboard selection retains keyboard focus",
+      "pass": true
+    },
+    {
+      "name": "Unknown preserves all 58 counties with unavailable values",
+      "pass": true,
+      "state": {
+        "age": "0–18 yearsFemale128,573Male136,31519–44 yearsFemale155,764Male129,44245–64 yearsFemale96,891Male78,80365+ yearsFemale77,321Male49,586",
+        "county": "Orange",
+        "coverage": "Observed county subtotalUnavailablePublished language counts only; coverage shown alongside.Count coverage0 / 58Counties with an observed selected-language count.Share coverage0 / 58Counties with an observed count and valid denominator.",
+        "error": null,
+        "heading": "Orange County",
+        "language": "unknown",
+        "metrics": "Language countUnavailableCounty total852,695Language shareUnavailable",
+        "month": "2026-09",
+        "notice": "2026-09 · Unknown · Orange selected. All views use the same validated snapshot.",
+        "race": "American Indian/Alaska Native964Asian170,960Black14,376Hispanic398,311Not reported143,582White124,502",
+        "rowCount": 58,
+        "selectedMap": [
+          "Orange"
+        ],
+        "selectedTable": [
+          "Orange"
+        ],
+        "map": {
+          "colors": [
+            "#d8dedc"
+          ],
+          "explanation": "No observed counts can be ranked for this selection. All 58 counties remain selectable.",
+          "paths": 58
+        }
+      }
+    },
+    {
+      "name": "Suppressed Alpine remains selectable without inferred zero",
+      "pass": true,
+      "state": {
+        "age": "0–18 yearsFemale50Male5519–44 yearsFemale57Male3245–64 yearsFemale36Male3465+ yearsFemale23Male21",
+        "county": "Alpine",
+        "coverage": "Observed county subtotal3,505,796Published language counts only; coverage shown alongside.Count coverage56 / 58Counties with an observed selected-language count.Share coverage56 / 58Counties with an observed count and valid denominator.",
+        "error": null,
+        "heading": "Alpine County",
+        "language": "spanish",
+        "metrics": "Language countUnavailableCounty total308Language shareUnavailable",
+        "month": "2026-09",
+        "notice": "2026-09 · Spanish · Alpine selected. All views use the same validated snapshot.",
+        "race": "American Indian/Alaska NativeUnavailableOne or more required age-group counts unavailable.AsianUnavailableOne or more required age-group counts unavailable.BlackUnavailableOne or more required age-group counts unavailable.HispanicUnavailableOne or more required age-group counts unavailable.Not reportedUnavailableOne or more required age-group counts unavailable.WhiteUnavailableOne or more required age-group counts unavailable.",
+        "rowCount": 58,
+        "selectedMap": [
+          "Alpine"
+        ],
+        "selectedTable": [
+          "Alpine"
+        ]
+      }
+    },
+    {
+      "name": "Historical month recomputes counts, total and share",
+      "pass": true,
+      "state": {
+        "age": "0–18 yearsFemale570,701Male591,20519–44 yearsFemale405,609Male196,71345–64 yearsFemale147,148Male113,42265+ yearsFemale211,445Male120,232",
+        "county": "Los Angeles",
+        "coverage": "Observed county subtotal2,640,344Published language counts only; coverage shown alongside.Count coverage57 / 58Counties with an observed selected-language count.Share coverage57 / 58Counties with an observed count and valid denominator.",
+        "error": null,
+        "heading": "Los Angeles County",
+        "language": "spanish",
+        "metrics": "Language count1,083,961County total2,356,475Language share46.0%",
+        "month": "2010-01",
+        "notice": "2010-01 · Spanish · Los Angeles selected. All views use the same validated snapshot.",
+        "race": "American Indian/Alaska Native2,669Asian187,433Black256,802Hispanic1,506,531Not reported124,870White278,170",
+        "rowCount": 58,
+        "selectedMap": [
+          "Los Angeles"
+        ],
+        "selectedTable": [
+          "Los Angeles"
+        ]
+      }
+    },
+    {
+      "name": "Share sorting puts Imperial first, unavailable last",
+      "pass": true,
+      "first": {
+        "county": "Imperial",
+        "share": "57.5%"
+      },
+      "last": [
+        {
+          "county": "Alpine",
+          "share": "Unavailable"
+        },
+        {
+          "county": "Mono",
+          "share": "Unavailable"
+        }
+      ]
+    },
+    {
+      "name": "Search filters table without silently changing selected county",
+      "pass": true
+    },
+    {
+      "name": "Rapid month/language/county changes finish on latest selection",
+      "pass": true,
+      "state": {
+        "age": "0–18 yearsFemale128,573Male136,31519–44 yearsFemale155,764Male129,44245–64 yearsFemale96,891Male78,80365+ yearsFemale77,321Male49,586",
+        "county": "Orange",
+        "coverage": "Observed county subtotal3,505,796Published language counts only; coverage shown alongside.Count coverage56 / 58Counties with an observed selected-language count.Share coverage56 / 58Counties with an observed count and valid denominator.",
+        "error": null,
+        "heading": "Orange County",
+        "language": "spanish",
+        "metrics": "Language count217,362County total852,695Language share25.5%",
+        "month": "2026-09",
+        "notice": "2026-09 · Spanish · Orange selected. All views use the same validated snapshot.",
+        "race": "American Indian/Alaska Native964Asian170,960Black14,376Hispanic398,311Not reported143,582White124,502",
+        "rowCount": 58,
+        "selectedMap": [
+          "Orange"
+        ],
+        "selectedTable": [
+          "Orange"
+        ]
+      }
+    },
+    {
+      "name": "Warm filter updates measured through browser interaction",
+      "pass": true,
+      "timings": [
+        {
+          "language": "mandarin",
+          "elapsed_ms": 116
+        },
+        {
+          "language": "unknown",
+          "elapsed_ms": 113
+        },
+        {
+          "language": "spanish",
+          "elapsed_ms": 21
+        }
+      ]
+    },
+    {
+      "name": "Reset restores defaults, count sorting, and clear search",
+      "pass": true
+    },
+    {
+      "name": "390px mobile layout has no page overflow and linked county selection works",
+      "pass": true,
+      "dimensions": {
+        "pageWidth": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "Observed numerator with incomplete county denominator keeps count but withholds share",
+      "pass": true,
+      "state": {
+        "age": "0–18 yearsFemale53Male5719–44 yearsFemale67Male5345–64 yearsFemale41Male4265+ yearsFemaleUnavailableMaleUnavailable",
+        "county": "Alpine",
+        "coverage": "Observed county subtotal4,199,824Published language counts only; coverage shown alongside.Count coverage58 / 58Counties with an observed selected-language count.Share coverage57 / 58Counties with an observed count and valid denominator.",
+        "error": null,
+        "heading": "Alpine County",
+        "language": "spanish",
+        "metrics": "Language count12County totalUnavailableLanguage shareUnavailable",
+        "month": "2022-05",
+        "notice": "2022-05 · Spanish · Alpine selected. All views use the same validated snapshot.",
+        "race": "American Indian/Alaska Native140AsianUnavailableOne or more required age-group counts unavailable.BlackUnavailableOne or more required age-group counts unavailable.HispanicUnavailableOne or more required age-group counts unavailable.Not reportedUnavailableOne or more required age-group counts unavailable.WhiteUnavailableOne or more required age-group counts unavailable.",
+        "rowCount": 58,
+        "selectedMap": [
+          "Alpine"
+        ],
+        "selectedTable": [
+          "Alpine"
+        ]
+      },
+      "reason": "County total is incomplete; share unavailable."
+    },
+    {
+      "name": "Top-12 bar selection synchronizes county views",
+      "pass": true
+    },
+    {
+      "name": "Small positive share is displayed as <0.1% rather than 0.0%",
+      "pass": true,
+      "state": "Language count352County total484,014Language share<0.1%"
+    },
+    {
+      "name": "Map keyboard Space selects a county",
+      "pass": true
+    },
+    {
+      "name": "390px mobile county-map pointer selection",
+      "pass": true
+    },
+    {
+      "name": "Skip link moves keyboard focus to county detail",
+      "pass": true
+    },
+    {
+      "name": "Actual CSV download during filtered search retains all 58 rows and unavailable blanks",
+      "pass": true,
+      "rows": 58
+    }
+  ]
+}

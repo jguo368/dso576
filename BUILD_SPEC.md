@@ -31,7 +31,7 @@ Use one page titled **Medi-Cal language-access planning**. Default to the latest
 
 Month/language changes update overview, map, comparison, and county language metrics. Demographic context depends on month/county only. Map, table, and selector share one county selection; clear stale chart selections on filter changes. If the county is unavailable in a new month, select the first available county and explain the change. Keep the selector as an accessible alternative to chart selection.
 
-Map colors encode raw selected-language counts using a sequential blue scale recalculated for each selection, with a count legend. Keep unavailable counties gray and distinct from observed zero, outline the selected county, and include county/count/total/share in hover. Colors are not comparable across filter selections.
+Map colors encode raw selected-language counts using a sequential blue scale recalculated for each selection, with a count legend. Use a labeled square-root color scale to keep smaller populations visible. Keep unavailable counties gray and distinct from observed zero, outline the selected county, and include county/count/total/share in hover. Colors are not comparable across filter selections.
 
 Format counts as comma-separated integers and shares as percentages with one decimal; show positive shares below 0.1% as `<0.1%`. Missing results display **Unavailable**, with a reason where known. Missing demographic bars need explicit unavailable labels. If all counts are unavailable, retain the county map/table and explain that no observed counts can be ranked. Age labels are 0–18, 19–44, 45–64, 65+; expand AI/AN to American Indian/Alaska Native.
 
@@ -73,7 +73,7 @@ Demographic `share_of_county` uses the same complete positive denominator. [ANAL
 
 ## Architecture and technical choices
 
-Use Python 3.11+, pandas, and NumPy for the backend; Streamlit and Plotly for Phase 3. The small canonical CSV fits an in-memory DataFrame. No database, credentials, remote queries, or live DHCS calls are needed at dashboard runtime.
+Use Python 3.11+, pandas, and NumPy for the backend. Phase 3 extends the existing standard-library HTTP server with native HTML/CSS/SVG; this implementation supersedes the earlier Streamlit/Plotly proposal without adding runtime dependencies. The small canonical CSV fits an in-memory DataFrame. No database, credentials, remote queries, or live DHCS calls are needed at dashboard runtime.
 
 | Component | Job and boundary |
 | --- | --- |
@@ -86,7 +86,7 @@ Use Python 3.11+, pandas, and NumPy for the backend; Streamlit and Plotly for Ph
 
 Prepare geometry once from [Census 2025 county boundaries at 1:5,000,000](https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_us_county_5m.zip): filter `STATEFP == '06'`, transform to WGS84/EPSG:4326, and save `data/california_counties.geojson`. Preserve `NAME` as `properties.county`; require 58 matching names and no unmatched backend keys. Geometry is a display asset; no live boundary/tile download is required during use.
 
-Cache validated data and geometry using [Streamlit data caching](https://docs.streamlit.io/develop/api-reference/caching-and-state/st.cache_data), invalidating when files change. Reuse prepared data and compute views from the selected month's 58 rows. Keep selection state in the app and use supported [chart selection events](https://docs.streamlit.io/develop/api-reference/charts/st.plotly_chart). On load/validation failure, show an actionable error and stop dependent rendering. Target warm filter updates within two seconds locally; measure during Phase 3.
+Cache validated data and geometry by source-file modification time and size, invalidating when files change. Reuse prepared data and compute comparisons from the selected month's 58 rows. Cache comparison/county responses and transfer only metadata, local geometry, the selected comparison, and the county trend/detail. Keep one shared county selection in the app; SVG click/keyboard events, table buttons, quick-selection bars, and the county selector update that state. Cancel superseded requests and reject mixed snapshot responses. On load/validation failure, show an actionable error and stop dependent rendering. Target warm filter updates within two seconds locally; record actual verification in `outputs/dashboard_browser_verification.md`.
 
 ## Build order and acceptance
 

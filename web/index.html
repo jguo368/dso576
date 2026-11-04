@@ -1,10 +1,57 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Medi-Cal · Language Explorer</title><link rel="stylesheet" href="/styles.css"><script defer src="/app.js"></script></head>
-<body><header><a href="/">M<span>+</span> <b>California health data</b></a><span>MEDI-CAL / LANGUAGE EXPLORER</span></header>
-<main><div class="eyebrow">COUNTY INSIGHTS · CALIFORNIA</div><h1>Understand the people.<br><em>Plan for their language.</em></h1><p class="intro">Explore published Medi-Cal certified eligible counts by primary language, county, and month.</p>
-<section class="filters" aria-label="Dashboard filters"><label>Eligibility month<select id="month"></select></label><label>Primary language<select id="language"></select></label><button id="download" disabled>Download county CSV ↓</button></section>
-<p id="notice" role="status">Loading the local dataset…</p><section id="metrics" class="metrics" aria-label="Summary metrics"></section>
-<div class="grid"><section class="panel"><div class="eyebrow">01 / COMPARE</div><h2>Where are published counts highest?</h2><p>Top 12 counties for the selected month and language.</p><div id="bars"></div></section>
-<section class="panel"><div class="eyebrow">02 / EXPLORE OVER TIME</div><h2>A closer look at one county</h2><label>County<select id="county"></select></label><div id="trend"></div><p id="point"></p><p class="small">Monthly observations are not unique people across time. Gaps indicate suppressed counts or absent records. Language coding may change; Hindi and Punjabi first appear in July 2025.</p></section></div>
-<section class="panel"><div class="table-heading"><div><div class="eyebrow">03 / ALL COUNTIES</div><h2>County comparison</h2></div><label>Find a county<input id="search" type="search" placeholder="Search counties…"></label></div><p>Descending published counts; alphabetical ties. Equal counts share competition ranks. Unavailable counts remain unranked.</p><div class="table-scroll"><table><thead><tr><th>Rank</th><th>County</th><th>Certified eligibles</th><th>Availability / source annotation</th><th>Status code</th></tr></thead><tbody id="rows"></tbody></table></div></section>
-<footer><b>Read the data carefully</b><p>Source: bundled DHCS “By Primary Language, Certified Eligibles” CSV. This view uses named county records only; statewide and invalid-county records are excluded. Counts describe certified eligibility, not provider availability or evidence of an access barrier.</p><p>Exact county language shares are unavailable: a verified county-total denominator is not included. Published language counts must not be summed into an exact county denominator. Unknown and Missing/Unknown remain separate categories. Status codes are shown as provided, without inferred definitions.</p></footer></main></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Medi-Cal language-access planning</title>
+  <link rel="stylesheet" href="/styles.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#county-detail">Skip to county detail</a>
+<header><a class="brand" href="/" aria-label="Medi-Cal planning home">M<span>+</span><b>California health data</b></a><span class="header-note">MEDI-CAL / POPULATION PLANNING</span></header>
+<main>
+  <div class="eyebrow">58 COUNTIES · ONE CONNECTED VIEW</div>
+  <h1>Medi-Cal language-access planning</h1>
+  <p class="intro">Find the populations to look at more closely. Choose a county on the map, in the table, or from the selector to explore its language count, concentration, and demographic context.</p>
+  <section class="filters" aria-label="Dashboard filters">
+    <label for="month">Eligibility month<select id="month" disabled></select></label>
+    <label for="language">Primary language<select id="language" disabled></select></label>
+    <label for="county">Selected county<select id="county" disabled></select></label>
+    <button id="reset" class="secondary" disabled>Reset view</button>
+    <button id="download" disabled>Download county CSV ↓</button>
+  </section>
+  <p id="notice" role="status" aria-live="polite">Loading the validated county-month snapshot…</p>
+  <div id="error" role="alert" hidden></div>
+  <section id="metrics" class="metrics" aria-label="Statewide coverage"></section>
+  <p id="statewide" class="small"></p>
+  <div class="map-detail-grid">
+    <section class="panel map-panel" aria-labelledby="map-heading">
+      <div class="eyebrow">01 / CHOOSE A COUNTY</div><h2 id="map-heading">Explore California</h2>
+      <p>Click a county to see its detail. Blue shows language counts; the outlined county is selected.</p>
+      <div class="map-wrap"><svg id="county-map" viewBox="0 0 550 560" role="group" aria-label="California counties. Select a county to update its detail."></svg><div id="map-tooltip" role="tooltip" hidden></div></div>
+      <div class="map-legend"><span id="legend-min">0</span><span class="legend-scale" aria-hidden="true"></span><span id="legend-max"></span><span class="legend-key"><i class="missing-key"></i>Unavailable</span></div>
+      <p id="map-empty" class="small"></p><p class="small">Colors rescale with each month/language. They are not comparable across selections. Use the county selector as a keyboard alternative.</p>
+    </section>
+    <section id="county-detail" class="panel detail-panel" aria-labelledby="detail-heading" aria-busy="true" tabindex="-1">
+      <div class="eyebrow">02 / SELECTED COUNTY</div><h2 id="detail-heading">County detail</h2>
+      <p id="detail-selection" class="selection-label"></p><div id="county-metrics" class="county-metrics"></div>
+      <p id="availability" class="availability"></p><p id="publication" class="small"></p>
+      <h3>Language count over time</h3><div id="trend"></div><p id="point" class="small"></p>
+      <p class="small">Monthly observations are not unique people across time. Gaps indicate unavailable counts. This trend uses the same snapshot as the map and table.</p>
+    </section>
+  </div>
+  <section class="panel" aria-labelledby="comparison-heading">
+    <div class="table-heading"><div><div class="eyebrow">03 / COMPARE ALL COUNTIES</div><h2 id="comparison-heading">Size and concentration</h2></div><div class="table-controls"><label for="sort">Order counties by<select id="sort"><option value="count">Language count · highest first</option><option value="share">Language share · highest first</option><option value="county">County · A to Z</option></select></label><label for="search">Find a county<input id="search" type="search" placeholder="Search counties…"></label></div></div>
+    <p class="small">Select any county name to update the map and detail. Rank always refers to language count; tied counts share a rank. Unavailable values sort last. Search filters this table; CSV includes all 58 counties.</p>
+    <p id="table-status" class="small" aria-live="polite"></p>
+    <div class="table-scroll"><table><caption class="sr-only">County language counts, complete county denominators, language shares, and availability</caption><thead><tr><th scope="col">Count rank</th><th scope="col">County</th><th scope="col">Language count</th><th scope="col">County total</th><th scope="col">Language share</th><th scope="col">Availability</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <details class="top-counties"><summary>Quick selection: 12 largest language populations</summary><div id="bars"></div></details>
+  </section>
+  <section class="demographic-section" aria-labelledby="demographic-heading">
+    <div class="eyebrow">04 / COUNTY DEMOGRAPHIC CONTEXT</div><h2 id="demographic-heading">All Medi-Cal eligibles in this county</h2>
+    <p id="demographic-selection"></p><p class="small">These charts describe the whole county eligible population, including other languages. They do not describe the selected-language subgroup. Changing language does not change this demographic context.</p>
+    <div class="demographic-grid"><section class="panel"><h3>Age and sex</h3><p class="small"><span class="female-dot"></span>Female <span class="male-dot"></span>Male</p><div id="age-sex"></div></section><section class="panel"><h3>Race and ethnicity</h3><p class="small">Counts summed across all four age groups. Any missing component makes that group unavailable.</p><div id="race"></div></section></div>
+  </section>
+  <footer><b>Read the data carefully</b><p id="source"></p><p>Language share = observed primary-language count ÷ complete, positive county total. The denominator requires all eight age/sex cells. Suppressed or absent values are unavailable, never zero; suppressed values are not reconstructed. Unknown and Missing/Unknown are separate categories.</p><p><b>P = preliminary</b> (may be revised); <b>F = final</b>. Population comparisons support further review. They do not measure interpreter demand, provider capacity, or proven service shortages.</p><p><a href="https://data.ca.gov/@california-department-of-health-care-services/medi-cal-certified-eligibles-data-by-month-with-demographics" target="_blank" rel="noreferrer">DHCS source resources ↗</a> · County boundaries: U.S. Census Bureau, 2025 cartographic boundaries. Data and boundaries are bundled for offline use.</p></footer>
+</main>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 Phase 2 delivers one canonical county-month dataset, a reproducible cleaning
 pipeline, reusable analysis functions, and the specification for the Phase 3
-dashboard. The interface itself is the next phase.
+dashboard. The Phase 3 local dashboard now connects those validated outputs to an interactive county map and detail views.
 
 ## Start here
 
@@ -63,6 +63,6 @@ capacity or prove a service shortage.
 
 ## Local language dashboard
 
-Run `python dashboard.py` from the repository root after installing requirements.
+Run `.venv/bin/python dashboard.py` from this repository folder after installing requirements.
 Open http://127.0.0.1:8050. See [DASHBOARD.md](DASHBOARD.md) for features and data limitations.
-This dashboard uses the bundled language-only snapshot; it is separate from the canonical Phase 2 backend and does not implement every Phase 3 requirement in BUILD_SPEC.md.
+The dashboard uses the canonical Phase 2 dataset and backend for counts, denominators, shares, rankings, coverage, trends, and county demographic context. Select counties on the map, in the table, or from the dropdown; the views stay synchronized. See `outputs/dashboard_browser_verification.md` for the tested acceptance cases.
