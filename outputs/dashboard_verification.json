@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-04",
+  "implementation_commit": "d6e8e73b266e9e6e24b8515067771a78677c0bea",
+  "branch": "codex/interactive-county-dashboard",
+  "result": "PASS",
+  "source_sha256": "8bd21b92046753bee440ef290192b8b260fb317953e2e2fca553ff2e3f46d803",
+  "code_sha256": {
+    "dashboard.py": "8adcbf8e3279cc5c3fc577957d89f5aae003b683c4820ad895fd53a62ff7155b",
+    "web/app.js": "bbaa832ef3ac5e45bf1ac8e83d248d59c9feb2bfa1ccf40c3e18515a5ce8ae56",
+    "web/index.html": "5a7f137de9476cdfedacf8cfda88e5b046b7c0e02e5d900299350a9869a9f6b7",
+    "web/styles.css": "d4998b48516a8de32c06fddcc02875b2e7350b8bd168510e2b70fb2c4b775c75",
+    "data/california_counties.geojson": "0167a3a30a95b3e07badb698e7b59740e1c70fc701e8881ed7949ce9c28be65f",
+    "tests/test_dashboard.py": "b406d9efe40344f37e14d805542bc9264e904104b032ef371f23795428bdcc37",
+    "scripts/audit_shawn_shih.py": "9ac2896eaa03d168f7a2feec1b6dd059eaa8ec4dec62b93a26ae32845d30d0e2"
+  },
+  "tests": {
+    "existing_backend_tests": 22,
+    "dashboard_api_tests": 12,
+    "browser_checks": 22,
+    "independent_audit_snapshot_records": 232,
+    "independent_audit_synthetic_cases": 7
+  },
+  "payloads": [
+    {
+      "route": "/api/metadata",
+      "bytes": 4183,
+      "gzip_bytes": 1401
+    },
+    {
+      "route": "/api/geometry",
+      "bytes": 213290,
+      "gzip_bytes": 67838
+    },
+    {
+      "route": "/api/comparison?month=2026-09&language=spanish",
+      "bytes": 27271,
+      "gzip_bytes": 2333
+    },
+    {
+      "route": "/api/county?month=2026-09&language=spanish&county=Los+Angeles",
+      "bytes": 18729,
+      "gzip_bytes": 2155
+    }
+  ],
+  "initial_view_bytes": 263473,
+  "initial_view_gzip_bytes": 73727,
+  "previous_raw_payload_bytes": 40385605,
+  "browser_filter_samples_ms": [
+    116,
+    113,
+    21
+  ],
+  "browser_console_errors_or_warnings": [],
+  "scope": "Local browser checks at 1280x900 and 390x844; not a cross-browser or formal screen-reader audit. True zero/zero denominators covered by synthetic backend cases. Original October report unchanged."
+}

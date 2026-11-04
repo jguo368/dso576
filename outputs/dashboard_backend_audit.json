@@ -1,0 +1,254 @@
+{
+  "checked_commit": "d6e8e73b266e9e6e24b8515067771a78677c0bea",
+  "source_file": "dso576/project/medi_cal_merged_county_month.csv",
+  "source_sha256": "8bd21b92046753bee440ef290192b8b260fb317953e2e2fca553ff2e3f46d803",
+  "source_shape": [
+    11658,
+    74
+  ],
+  "snapshot_checks": [
+    {
+      "month": "2010-01",
+      "language": "spanish",
+      "county_rows": 58,
+      "observed_counties": 57,
+      "observed_subtotal": "2640344.0",
+      "missing_count_counties": [
+        "Alpine"
+      ],
+      "statewide_share": null,
+      "los_angeles": {
+        "count": "1083961.0",
+        "total": "2356475.0",
+        "share": "0.4599925736534442334418994473"
+      },
+      "first_five_counties": [
+        "Los Angeles",
+        "Orange",
+        "San Diego",
+        "Riverside",
+        "San Bernardino"
+      ],
+      "result": "PASS: all 58 counts, denominators, shares, ranks, order, and overview checked against CSV oracle"
+    },
+    {
+      "month": "2026-09",
+      "language": "spanish",
+      "county_rows": 58,
+      "observed_counties": 56,
+      "observed_subtotal": "3505796.0",
+      "missing_count_counties": [
+        "Alpine",
+        "Mono"
+      ],
+      "statewide_share": null,
+      "los_angeles": {
+        "count": "1129822.0",
+        "total": "3639204.0",
+        "share": "0.3104585508259498505717184307"
+      },
+      "first_five_counties": [
+        "Los Angeles",
+        "Orange",
+        "San Diego",
+        "Riverside",
+        "San Bernardino"
+      ],
+      "result": "PASS: all 58 counts, denominators, shares, ranks, order, and overview checked against CSV oracle"
+    },
+    {
+      "month": "2026-09",
+      "language": "mandarin",
+      "county_rows": 58,
+      "observed_counties": 36,
+      "observed_subtotal": "102841.0",
+      "missing_count_counties": [
+        "Alpine",
+        "Amador",
+        "Calaveras",
+        "Colusa",
+        "Del Norte",
+        "Glenn",
+        "Imperial",
+        "Inyo",
+        "Kings",
+        "Lassen",
+        "Madera",
+        "Mariposa",
+        "Modoc",
+        "Mono",
+        "Nevada",
+        "Plumas",
+        "San Benito",
+        "Sierra",
+        "Siskiyou",
+        "Sutter",
+        "Trinity",
+        "Tuolumne"
+      ],
+      "statewide_share": null,
+      "los_angeles": {
+        "count": "49336.0",
+        "total": "3639204.0",
+        "share": "0.01355681077510356660412551756"
+      },
+      "first_five_counties": [
+        "Los Angeles",
+        "Santa Clara",
+        "Alameda",
+        "San Bernardino",
+        "Orange"
+      ],
+      "result": "PASS: all 58 counts, denominators, shares, ranks, order, and overview checked against CSV oracle"
+    },
+    {
+      "month": "2026-09",
+      "language": "unknown",
+      "county_rows": 58,
+      "observed_counties": 0,
+      "observed_subtotal": null,
+      "missing_count_counties": [
+        "Alameda",
+        "Alpine",
+        "Amador",
+        "Butte",
+        "Calaveras",
+        "Colusa",
+        "Contra Costa",
+        "Del Norte",
+        "El Dorado",
+        "Fresno",
+        "Glenn",
+        "Humboldt",
+        "Imperial",
+        "Inyo",
+        "Kern",
+        "Kings",
+        "Lake",
+        "Lassen",
+        "Los Angeles",
+        "Madera",
+        "Marin",
+        "Mariposa",
+        "Mendocino",
+        "Merced",
+        "Modoc",
+        "Mono",
+        "Monterey",
+        "Napa",
+        "Nevada",
+        "Orange",
+        "Placer",
+        "Plumas",
+        "Riverside",
+        "Sacramento",
+        "San Benito",
+        "San Bernardino",
+        "San Diego",
+        "San Francisco",
+        "San Joaquin",
+        "San Luis Obispo",
+        "San Mateo",
+        "Santa Barbara",
+        "Santa Clara",
+        "Santa Cruz",
+        "Shasta",
+        "Sierra",
+        "Siskiyou",
+        "Solano",
+        "Sonoma",
+        "Stanislaus",
+        "Sutter",
+        "Tehama",
+        "Trinity",
+        "Tulare",
+        "Tuolumne",
+        "Ventura",
+        "Yolo",
+        "Yuba"
+      ],
+      "statewide_share": null,
+      "los_angeles": {
+        "count": null,
+        "total": "3639204.0",
+        "share": null
+      },
+      "first_five_counties": [
+        "Alameda",
+        "Alpine",
+        "Amador",
+        "Butte",
+        "Calaveras"
+      ],
+      "result": "PASS: all 58 counts, denominators, shares, ranks, order, and overview checked against CSV oracle"
+    }
+  ],
+  "synthetic_cases": [
+    {
+      "case": "normal",
+      "county": "Alameda",
+      "input_count": 25,
+      "input_total": 100,
+      "expected_share": 0.25,
+      "actual_share": 0.25,
+      "result": "PASS"
+    },
+    {
+      "case": "observed_zero",
+      "county": "Alpine",
+      "input_count": 0,
+      "input_total": 100,
+      "expected_share": 0,
+      "actual_share": 0.0,
+      "result": "PASS"
+    },
+    {
+      "case": "missing_count",
+      "county": "Amador",
+      "input_count": null,
+      "input_total": 100,
+      "expected_share": null,
+      "actual_share": null,
+      "result": "PASS"
+    },
+    {
+      "case": "incomplete_total",
+      "county": "Butte",
+      "input_count": 25,
+      "input_total": 100,
+      "expected_share": null,
+      "actual_share": null,
+      "result": "PASS"
+    },
+    {
+      "case": "zero_total",
+      "county": "Colusa",
+      "input_count": 0,
+      "input_total": 0,
+      "expected_share": null,
+      "actual_share": null,
+      "result": "PASS"
+    },
+    {
+      "case": "tie",
+      "county": "Del Norte",
+      "input_count": 25,
+      "input_total": 100,
+      "expected_share": 0.25,
+      "actual_share": 0.25,
+      "result": "PASS"
+    },
+    {
+      "case": "different_denominator",
+      "county": "Fresno",
+      "input_count": 25,
+      "input_total": 200,
+      "expected_share": 0.125,
+      "actual_share": 0.125,
+      "result": "PASS"
+    }
+  ],
+  "nonmutation": "PASS: prepared input and source CSV unchanged",
+  "interface_scope": "Backend arithmetic and data-contract checks only. Browser behavior is verified separately in outputs/dashboard_browser_verification.md.",
+  "result": "PASS"
+}
