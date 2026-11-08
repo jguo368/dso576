@@ -166,6 +166,19 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(len(app.dataframe), 1)
         self.assertEqual(len(app.get('download_button')), 1)
 
+    def test_streamlit_map_payload_uses_json_null_not_nan(self):
+        comparison = dashboard.load_dataset().comparison('2026-09', 'mandarin')
+        features = dashboard.streamlit_map_features(
+            dashboard.load_geometry(), comparison['counties']
+        )
+        json.dumps(features, allow_nan=False)
+        unavailable = [
+            feature for feature in features
+            if feature['selected_language_count'] is None
+        ]
+        self.assertTrue(unavailable)
+        self.assertTrue(all(feature['language_share'] is None for feature in unavailable))
+
 
 if __name__ == '__main__':
     unittest.main()

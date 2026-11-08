@@ -181,6 +181,23 @@ def _format_percent(value):
     return 'Unavailable' if value is None or pd.isna(value) else f'{float(value):.1%}'
 
 
+def streamlit_map_features(geometry, county_rows):
+    """Join strict-JSON county metrics to GeoJSON without pandas NaN coercion."""
+    metric_by_county = {row['county']: row for row in county_rows}
+    features = []
+    for feature in geometry['features']:
+        name = feature['properties']['county']
+        row = metric_by_county[name]
+        features.append({
+            **feature,
+            'county': name,
+            'selected_language_count': row['selected_language_count'],
+            'county_total_eligibles': row['county_total_eligibles'],
+            'language_share': row['language_share'],
+        })
+    return features
+
+
 def streamlit_main():
     """Render the dashboard inside Streamlit without starting a second server."""
     import streamlit as st
@@ -270,18 +287,7 @@ def streamlit_main():
     )
 
     comparison_frame = pd.DataFrame(comparison['counties'])
-    metric_by_county = comparison_frame.set_index('county').to_dict('index')
-    mapped_features = []
-    for feature in geometry['features']:
-        name = feature['properties']['county']
-        row = metric_by_county[name]
-        mapped_features.append({
-            **feature,
-            'county': name,
-            'selected_language_count': row['selected_language_count'],
-            'county_total_eligibles': row['county_total_eligibles'],
-            'language_share': row['language_share'],
-        })
+    mapped_features = streamlit_map_features(geometry, comparison['counties'])
 
     map_column, detail_column = st.columns([1.15, 1])
     with map_column:
