@@ -150,6 +150,22 @@ class DashboardTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'all 58 county rows'):
                 dashboard.load_dataset(path)
 
+    def test_streamlit_entrypoint_renders_without_starting_a_second_server(self):
+        from streamlit.testing.v1 import AppTest
+
+        entrypoint = Path(__file__).resolve().parents[1] / 'dashboard.py'
+        app = AppTest.from_file(str(entrypoint), default_timeout=60).run()
+        self.assertFalse(app.exception, [error.value for error in app.exception])
+        self.assertEqual(app.title[0].value, 'Medi-Cal language-access planning')
+        self.assertEqual(
+            [(control.label, control.value) for control in app.selectbox],
+            [('Eligibility month', '2026-09'),
+             ('Primary language', {'id': 'spanish', 'label': 'Spanish'}),
+             ('Selected county', 'Los Angeles')],
+        )
+        self.assertEqual(len(app.dataframe), 1)
+        self.assertEqual(len(app.get('download_button')), 1)
+
 
 if __name__ == '__main__':
     unittest.main()

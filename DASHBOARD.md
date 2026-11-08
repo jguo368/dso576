@@ -1,5 +1,24 @@
 # Medi-Cal language-access planning dashboard
 
+## Streamlit Community Cloud
+
+Deploy this repository with these settings:
+
+- Branch: `codex/interactive-county-dashboard`
+- Entrypoint file: `dashboard.py`
+
+`dashboard.py` detects Streamlit's script context and renders a native
+Streamlit dashboard. It does not open a second HTTP server or bind port 8050 in
+that mode. The root `requirements.txt` declares the cloud dependencies.
+
+To test the deployed entrypoint locally:
+
+```bash
+.venv/bin/streamlit run dashboard.py
+```
+
+## Standalone local server
+
 From this repository folder (`/Users/shawnshih/dso576/project`):
 
 ```bash

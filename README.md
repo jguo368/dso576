@@ -66,3 +66,8 @@ capacity or prove a service shortage.
 Run `.venv/bin/python dashboard.py` from this repository folder after installing requirements.
 Open http://127.0.0.1:8050. See [DASHBOARD.md](DASHBOARD.md) for features and data limitations.
 The dashboard uses the canonical Phase 2 dataset and backend for counts, denominators, shares, rankings, coverage, trends, and county demographic context. Select counties on the map, in the table, or from the dropdown; the views stay synchronized. See `outputs/dashboard_browser_verification.md` for the tested acceptance cases.
+
+For Streamlit Community Cloud, deploy `dashboard.py` from the
+`codex/interactive-county-dashboard` branch. Test that mode locally with
+`.venv/bin/streamlit run dashboard.py`. Running the same entrypoint directly
+with Python keeps the standalone local-server behavior.

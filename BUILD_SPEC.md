@@ -73,7 +73,7 @@ Demographic `share_of_county` uses the same complete positive denominator. [ANAL
 
 ## Architecture and technical choices
 
-Use Python 3.11+, pandas, and NumPy for the backend. Phase 3 extends the existing standard-library HTTP server with native HTML/CSS/SVG; this implementation supersedes the earlier Streamlit/Plotly proposal without adding runtime dependencies. The small canonical CSV fits an in-memory DataFrame. No database, credentials, remote queries, or live DHCS calls are needed at dashboard runtime.
+Use Python 3.11+, pandas, and NumPy for the backend. Phase 3 retains the existing standard-library HTTP server with native HTML/CSS/SVG for direct local use and adds a native Streamlit rendering path for Community Cloud deployment. Both modes use the same validated analysis functions and bundled snapshot. The small canonical CSV fits an in-memory DataFrame. No database, credentials, remote queries, or live DHCS calls are needed at dashboard runtime.
 
 | Component | Job and boundary |
 | --- | --- |
