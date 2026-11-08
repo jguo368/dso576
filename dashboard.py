@@ -210,7 +210,7 @@ def streamlit_main():
     st.markdown(
         """
         <style>
-        .block-container {max-width: 1400px; padding-top: 2rem;}
+        .block-container {max-width: 1400px; padding-top: 4rem;}
         [data-testid="stMetric"] {background: #f4f8f5; border: 1px solid #dce7df;
             border-radius: .5rem; padding: .8rem 1rem;}
         .dashboard-note {color: #52665b; font-size: .92rem;}
