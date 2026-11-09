@@ -9,7 +9,7 @@ The goal is to support evidence-based prioritization of communities for further 
 ## Live App and Demo
 
 - **Live Dashboard:** [Open Dashboard](https://interactive-county-dashboard-ekuekfedspp64bznr5it3r.streamlit.app/)
-- **Demo Video:** [Insert video link]
+- **Demo Video:** [Watch Demo Video](https://drive.google.com/file/d/1xF0m-0uGG4BvhucTaFMF2zHE_f5vRczc/view?usp=drive_link)
 - **GitHub Repository:** [jguo368/dso576](https://github.com/jguo368/dso576)
 
 ## Intended Users and Decisions
