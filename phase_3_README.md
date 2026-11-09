@@ -1,4 +1,12 @@
 # Medi-Cal Language-Access Planning Dashboard
+## Final Submission Version
+
+The final Phase 3 dashboard code is on the `codex/interactive-county-dashboard` branch.
+
+- [Final source code](https://github.com/jguo368/dso576/tree/codex/interactive-county-dashboard)
+- Entry point: `dashboard.py`
+- Run the Streamlit version using the instructions below to reproduce the interface shown in the live app and demo video.
+Please use this branch rather than `main` when running the app locally.
 
 ## Project Overview
 
@@ -60,43 +68,41 @@ The dataset preserves preliminary and final publication statuses. Missing or sup
 
 ## Run Locally
 
-**Requirements:** Python 3.11 or later.
+Requires Python 3.11 or later and Git.
 
-1. Clone the repository:
+### 1. Clone the final submission branch
 
-   ```bash
-   git clone https://github.com/jguo368/dso576.git
-   cd dso576
-   ```
+```bash
+git clone --branch codex/interactive-county-dashboard --single-branch https://github.com/jguo368/dso576.git
+cd dso576
+```
 
-2. Create and activate a virtual environment:
+### 2. Create and activate a virtual environment
 
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
+Windows PowerShell:
 
-3. Install dependencies:
+```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+macOS / Linux:
 
-4. Launch the Streamlit dashboard:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-   ```bash
-   streamlit run dashboard.py
-   ```
+### 3. Install dependencies and launch the app
 
-   Alternatively, run the standalone local server:
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run dashboard.py
+```
 
-   ```bash
-   python dashboard.py
-   ```
+Open the Local URL printed in the terminal, normally http://localhost:8501.
 
-   Open `http://127.0.0.1:8050` when using standalone mode.
-
-The dashboard uses bundled data and county geometry. No API keys, database connection, or live external data requests are required during normal operation.
+The app uses bundled data and county geometry. No API keys or database connection are required.
 
 ## Current Limitations
 
